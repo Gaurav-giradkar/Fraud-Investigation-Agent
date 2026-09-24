@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error":"#690005","surface-container":"#1c2028","surface-tint":"#7bd0ff","on-tertiary-fixed-variant":"#005236","on-secondary-fixed-variant":"#2f2ebe","on-primary":"#00354a","surface-bright":"#353942","surface-dim":"#0f131c","surface-variant":"#31353e","primary":"#8ed5ff","primary-fixed":"#c4e7ff","inverse-primary":"#00668a","tertiary":"#56e5a9","on-tertiary-container":"#004e34","inverse-on-surface":"#2c3039","surface-container-low":"#181c24","on-primary-fixed":"#001e2c","error":"#ffb4ab","on-primary-fixed-variant":"#004c69","surface-container-highest":"#31353e","inverse-surface":"#dfe2ee","on-error-container":"#ffdad6","tertiary-fixed":"#6ffbbe","on-primary-container":"#004965","secondary-fixed-dim":"#c0c1ff","on-tertiary":"#003824","outline":"#87929a","background":"#0f131c","secondary":"#c0c1ff","error-container":"#93000a","secondary-fixed":"#e1e0ff","tertiary-fixed-dim":"#4edea3","on-surface":"#dfe2ee","on-surface-variant":"#bdc8d1","outline-variant":"#3e484f","on-secondary-container":"#b0b2ff","primary-fixed-dim":"#7bd0ff","surface-container-lowest":"#0a0e16","surface":"#0f131c","on-secondary-fixed":"#07006c","secondary-container":"#3131c0","on-tertiary-fixed":"#002113","on-secondary":"#1000a9","tertiary-container":"#30c88f","primary-container":"#38bdf8","surface-container-high":"#262a33","on-background":"#dfe2ee"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-md":"0.5rem","space-xl":"1rem","space-sm":"0.375rem","space-xs":"0.25rem","space-lg":"0.75rem","gutter":"0.5rem","margin":"0.75rem"},fontFamily:{"body-md":["Inter"],"body-lg":["Inter"],"headline-sm":["Inter"],"label-lg":["JetBrains Mono"],"label-md":["JetBrains Mono"],"body-sm":["Inter"],"label-sm":["JetBrains Mono"],"headline-lg":["Inter"],"headline-md":["Inter"],"code-md":["JetBrains Mono"]},fontSize:{"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"body-lg":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-sm":["14px",{"lineHeight":"18px","fontWeight":"600"}],"label-lg":["13px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"label-md":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"12px","letterSpacing":"0.06em","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["16px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}],"code-md":["12px",{"lineHeight":"16px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-14 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.4)] flex items-center justify-between px-space-lg select-none"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Fraud Investigation Agent Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xdp9l8SuUnfq8mAGR_H_SKkzXyxG7a1yvs2w5_zBWRl2gLc0xNagiIgDpt3AkzFQUmJA5rryL37bJbZpWenWfdfRz0qehJoczB9jd5q4Hue5zeHuzFAjTaS0ZhVNFmfOEe47mBNX-XK6IyTIW5gbCT19Wq6gFmtn9bB4NHmMoEYb63aCTYjyWi1-7Q_gVDJKZCcC15GRXtJ_920uPb5mfH_zEYCakLfcSy8ZLnSNs"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight uppercase leading-none">TIGERGRAPH</span><span class="font-label-sm text-label-sm text-primary tracking-widest leading-none mt-0.5">FRAUD OPS COCKPIT</span></div></div><div class="h-6 w-px bg-surface-container-high"></div><div class="hidden xl:flex items-center gap-space-md font-label-sm text-label-sm bg-surface-container-low px-space-md py-1 rounded"><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span><span class="text-on-surface font-medium">TG CLUSTER: ONLINE</span><span class="text-outline font-normal">(v3.9.2-ent)</span></div><span class="text-outline-variant">|</span><div class="flex items-center gap-1 text-on-surface-variant"><span>LATENCY:</span><span class="text-primary font-medium">4.2ms</span></div><span class="text-outline-variant">|</span><div class="flex items-center gap-1 text-on-surface-variant"><span>NODES:</span><span class="text-on-surface font-medium">14.2M</span></div><span class="text-outline-variant">|</span><div class="flex items-center gap-1 text-on-surface-variant"><span>EDGES:</span><span class="text-on-surface font-medium">88.6M</span></div></div></div><div class="flex items-center gap-space-md flex-1 max-w-xl mx-space-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full bg-surface-container-low text-on-surface placeholder:text-outline font-label-md text-label-md pl-9 pr-14 py-1.5 rounded outline-none focus:bg-surface-container" placeholder="Query Case ID, Entity, Card, or Txn Hash..." type="text"/><kbd class="absolute right-2 top-1/2 -translate-y-1/2 bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-1.5 py-0.5 rounded shadow-sm">⌘K</kbd></div><div class="hidden lg:flex items-center gap-1.5 bg-surface-container-low px-space-md py-1 rounded whitespace-nowrap"><span class="w-2 h-2 rounded-full bg-error animate-ping"></span><span class="font-label-sm text-label-sm text-on-surface-variant">CASE:</span><span class="font-label-sm text-label-sm text-error font-medium">HHG-014</span><span class="font-label-sm text-label-sm text-on-surface-variant">(92/100 · CRITICAL)</span><span class="material-symbols-outlined text-outline text-[16px]">expand_more</span></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><button class="relative p-1.5 rounded bg-surface-container-low hover:bg-surface-container-high transition-colors text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[20px]">notifications_active</span><span class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-error text-on-error font-label-sm text-[9px] font-bold">3</span></button><button class="p-1.5 rounded bg-surface-container-low hover:bg-surface-container-high transition-colors text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[20px]">terminal</span></button></div><div class="h-6 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwEbji1-sugWItTnLLpVZ-8Un5QHHlwqgf-6HmmoInRgrYK7t7SBbOZULEq7AhFG2MMvNQ0j5bJMw3V4avBVMQ1PkcA2KEk4ghV_j0ilVryXY5wvxFEzfB0jJ6uQeFOESOdfA0SayB7b3Z7WoB7i7gcOvvCq8BpXDbBbawh_4bTmqDrSI_2n0DI-9BhZ0U4jtHd21iGstbQOlRkGx1_2fKiuQncfrJXPfCnIGbGQ"/><span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-tertiary ring-2 ring-surface-container-lowest"></span></div><div class="hidden md:flex flex-col text-left"><span class="font-label-sm text-label-sm text-on-surface font-semibold leading-tight">S. Vance</span><span class="font-label-sm text-label-sm text-tertiary text-[9px] leading-tight">L3 LEAD · ACTIVE SHIFT</span></div></div></div></header><aside class="fixed left-0 top-14 bottom-8 w-64 bg-surface-container-lowest z-40 flex flex-col justify-between py-space-md select-none"><div class="flex flex-col gap-space-sm px-space-xs"><div class="px-space-md py-1 font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center justify-between"><span>Mission Directives</span><span class="font-code-md text-code-md text-primary font-bold">GSQL v3</span></div><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-high text-primary font-bold border-l-2 border-primary-container"><a class="flex items-center gap-space-md px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">space_dashboard</span><span class="font-body-sm text-body-sm">DASHBOARD</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="cases" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">list_alt</span><span class="font-body-sm text-body-sm">CASE EXPLORER</span></div><span class="font-label-sm text-label-sm bg-surface-container-high px-1.5 py-0.5 rounded text-on-surface-variant">20</span></a><a class="flex items-center gap-space-md px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="workspace" href="#"><span class="material-symbols-outlined text-[18px]">biotech</span><span class="font-body-sm text-body-sm">INVESTIGATION WORKSPACE</span></a><a class="flex items-center gap-space-md px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="evidence" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span class="font-body-sm text-body-sm">EVIDENCE VIEW</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-2 rounded transition-colors bg-surface-container-high text-primary font-bold border-l-2 border-primary-container" data-path="graph" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">hub</span><span class="font-body-sm text-body-sm">GRAPH VIEW</span></div><span class="font-label-sm text-label-sm text-tertiary bg-surface-container-high px-1 py-0.5 rounded">LIVE</span></a><a class="flex items-center gap-space-md px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="agent-activity" href="#"><span class="material-symbols-outlined text-[18px]">smart_toy</span><span class="font-body-sm text-body-sm">AGENT ACTIVITY</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="evidence-request" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">dynamic_form</span><span class="font-body-sm text-body-sm">EVIDENCE REQUEST</span></div><span class="font-label-sm text-label-sm text-error bg-error-container/40 px-1 py-0.5 rounded">1 PENDING</span></a><a class="flex items-center gap-space-md px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="next-best-action" href="#"><span class="material-symbols-outlined text-[18px]">crisis_alert</span><span class="font-body-sm text-body-sm">NEXT BEST ACTION</span></a><a class="flex items-center gap-space-md px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="history" href="#"><span class="material-symbols-outlined text-[18px]">history_toggle_off</span><span class="font-body-sm text-body-sm">CASE HISTORY</span></a></nav></div><div class="px-space-md"><div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1"><div class="flex items-center justify-between font-label-sm text-label-sm"><span class="text-outline">AGENT ENGINE</span><span class="text-tertiary">AUTONOMOUS</span></div><div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden"><div class="bg-tertiary h-full w-4/5 animate-pulse"></div></div><div class="flex items-center justify-between font-label-sm text-[9px] text-on-surface-variant"><span class="text-on-surface-variant">CPU: 18.4%</span><span class="text-on-surface-variant">MEM: 41.2GB</span></div></div></div></aside><div class="pl-64"><main class="relative w-full pt-14 pb-8 min-h-screen bg-surface"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-space-sm p-space-sm bg-surface-container-lowest">
+<!-- Graph Command Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-low px-space-md py-space-sm rounded-lg shadow-sm">
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">hub</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">TOPOLOGY EXPLORER</span>
+<span class="bg-primary/20 text-primary font-label-sm text-label-sm px-1.5 py-0.5 rounded">GSQL SUBGRAPH</span>
+</div>
+<div class="h-4 w-px bg-surface-container-highest"></div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="bg-surface-container px-2 py-0.5 rounded text-on-surface">14 <span class="text-outline">NODES</span></span>
+<span class="bg-surface-container px-2 py-0.5 rounded text-on-surface">22 <span class="text-outline">EDGES</span></span>
+<span class="bg-surface-container px-2 py-0.5 rounded text-on-surface">3-HOP EXPANSION</span>
+<span class="bg-error-container/40 text-error px-2 py-0.5 rounded">MULE RING ALPHA</span>
+<span class="bg-surface-container px-2 py-0.5 rounded text-tertiary">LOUVAIN: 0.74</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm">
+<div class="flex items-center bg-surface-container-highest rounded p-0.5">
+<button class="px-2 py-1 bg-surface-container text-primary rounded shadow-sm font-semibold">Force-Directed</button>
+<button class="px-2 py-1 text-on-surface-variant hover:text-on-surface">Hierarchical</button>
+<button class="px-2 py-1 text-on-surface-variant hover:text-on-surface">Radial</button>
+</div>
+<div class="h-4 w-px bg-surface-container-highest"></div>
+<div class="flex items-center gap-1 bg-surface-container rounded px-2 py-1 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-outline cursor-pointer hover:text-on-surface" onclick="adjustZoom(-10)">zoom_out</span>
+<span class="w-10 text-center font-code-md text-code-md" id="zoom-val">100%</span>
+<span class="material-symbols-outlined text-[16px] text-outline cursor-pointer hover:text-on-surface" onclick="adjustZoom(10)">zoom_in</span>
+</div>
+<button class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded text-on-surface hover:bg-surface-container-high transition-colors" onclick="resetGraph()">
+<span class="material-symbols-outlined text-[14px]">restart_alt</span>
+<span>RESET</span>
+</button>
+<button class="flex items-center gap-1 bg-primary text-on-primary font-semibold px-2 py-1 rounded hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[14px]">terminal</span>
+<span>EXPORT GSQL</span>
+</button>
+</div>
+</div>
+<!-- Filter Pills Strip -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-low px-space-md py-1 rounded shadow-sm font-label-sm text-label-sm">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="text-outline uppercase tracking-wider">Node Types:</span>
+<label class="flex items-center gap-1 cursor-pointer bg-surface-container px-2 py-0.5 rounded text-primary">
+<input checked="" class="accent-primary" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Customer (Cyan)</span>
+</label>
+<label class="flex items-center gap-1 cursor-pointer bg-surface-container px-2 py-0.5 rounded text-secondary">
+<input checked="" class="accent-secondary" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Card (Blue)</span>
+</label>
+<label class="flex items-center gap-1 cursor-pointer bg-surface-container px-2 py-0.5 rounded text-primary-container">
+<input checked="" class="accent-primary-container" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Transaction (Amber)</span>
+</label>
+<label class="flex items-center gap-1 cursor-pointer bg-surface-container px-2 py-0.5 rounded text-secondary-fixed-dim">
+<input checked="" class="accent-secondary-fixed-dim" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span>
+<span>Device (Purple)</span>
+</label>
+<label class="flex items-center gap-1 cursor-pointer bg-surface-container px-2 py-0.5 rounded text-tertiary-fixed">
+<input checked="" class="accent-tertiary-fixed" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed"></span>
+<span>Email (Yellow)</span>
+</label>
+<label class="flex items-center gap-1 cursor-pointer bg-surface-container px-2 py-0.5 rounded text-tertiary">
+<input checked="" class="accent-tertiary" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Billing Region (Teal)</span>
+</label>
+<label class="flex items-center gap-1 cursor-pointer bg-surface-container px-2 py-0.5 rounded text-error">
+<input checked="" class="accent-error" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>Closed Case (Red)</span>
+</label>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-tertiary">bolt</span>
+<span>Graph Schema: <span class="font-code-md text-on-surface">FinCrimeGraph_v4</span></span>
+</div>
+</div>
+</div>
+<!-- Main Graph Workplace Layout -->
+<div class="relative flex flex-1 w-full overflow-hidden" style="height: calc(100vh - 170px);">
+<!-- Center Interactive SVG Canvas -->
+<div class="relative flex-1 bg-surface-container-lowest overflow-hidden select-none" id="graph-viewport">
+<!-- Ambient Coordinate Pattern Background -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="32" id="grid-dots" patternunits="userSpaceOnUse" width="32">
+<circle cx="2" cy="2" fill="#7bd0ff" r="1"></circle>
+<path d="M 32 0 L 0 0 0 32" fill="none" stroke="#262a33" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid-dots)" height="100%" width="100%"></rect>
+</svg>
+<!-- SVG Topology Renderer -->
+<svg class="absolute inset-0 w-full h-full cursor-grab active:cursor-grabbing transition-transform duration-75" id="network-svg" viewbox="0 0 1000 680">
+<defs>
+<!-- Marker Arrows -->
+<marker id="arrow" markerheight="6" markerwidth="6" orient="auto-start-reverse" refx="24" refy="5" viewbox="0 0 10 10">
+<path d="M 0 1 L 9 5 L 0 9 z" fill="#87929a"></path>
+</marker>
+<marker id="arrow-alert" markerheight="6" markerwidth="6" orient="auto-start-reverse" refx="24" refy="5" viewbox="0 0 10 10">
+<path d="M 0 1 L 9 5 L 0 9 z" fill="#ffb4ab"></path>
+</marker>
+<marker id="arrow-active" markerheight="6" markerwidth="6" orient="auto-start-reverse" refx="24" refy="5" viewbox="0 0 10 10">
+<path d="M 0 1 L 9 5 L 0 9 z" fill="#8ed5ff"></path>
+</marker>
+<!-- Glow filters -->
+<filter height="140%" id="glow-cyan" width="140%" x="-20%" y="-20%">
+<fedropshadow dx="0" dy="0" flood-color="#8ed5ff" flood-opacity="0.8" stddeviation="4"></fedropshadow>
+</filter>
+<filter height="140%" id="glow-red" width="140%" x="-20%" y="-20%">
+<fedropshadow dx="0" dy="0" flood-color="#ffb4ab" flood-opacity="0.8" stddeviation="5"></fedropshadow>
+</filter>
+<filter height="140%" id="glow-purple" width="140%" x="-20%" y="-20%">
+<fedropshadow dx="0" dy="0" flood-color="#c0c1ff" flood-opacity="0.9" stddeviation="4"></fedropshadow>
+</filter>
+</defs>
+<!-- Dynamic Connection Edges Group -->
+<g id="edges-group">
+<!-- CUST-8831 -> VISA 4912 (OWNS) -->
+<line marker-end="url(#arrow)" stroke="#3e484f" stroke-width="1.5" x1="210" x2="350" y1="260" y2="180"></line>
+<rect fill="#181c24" height="15" rx="3" width="46" x="255" y="208"></rect>
+<text fill="#bdc8d1" font-family="JetBrains Mono" font-size="9" font-weight="600" text-anchor="middle" x="278" y="219">OWNS</text>
+<!-- VISA 4912 -> TX-49219-B (MADE) -->
+<line marker-end="url(#arrow-active)" stroke="#8ed5ff" stroke-width="2" x1="350" x2="490" y1="180" y2="280"></line>
+<rect fill="#181c24" height="15" rx="3" width="46" x="398" y="218"></rect>
+<text fill="#8ed5ff" font-family="JetBrains Mono" font-size="9" font-weight="600" text-anchor="middle" x="421" y="229">MADE</text>
+<!-- DEV-F901-X8 -> TX-49219-B (FROM_DEVICE) -->
+<line marker-end="url(#arrow)" stroke="#c0c1ff" stroke-dasharray="3,3" stroke-width="2" x1="650" x2="490" y1="210" y2="280"></line>
+<rect fill="#181c24" height="15" rx="3" width="82" x="540" y="235"></rect>
+<text fill="#c0c1ff" font-family="JetBrains Mono" font-size="9" font-weight="600" text-anchor="middle" x="581" y="246">FROM_DEVICE</text>
+<!-- TX-49219-B -> edward.sterling@proton.me (PURCHASER_EMAIL) -->
+<line marker-end="url(#arrow)" stroke="#3e484f" stroke-width="1.5" x1="490" x2="360" y1="280" y2="390"></line>
+<rect fill="#181c24" height="15" rx="3" width="105" x="375" y="328"></rect>
+<text fill="#bdc8d1" font-family="JetBrains Mono" font-size="9" font-weight="600" text-anchor="middle" x="427" y="339">PURCHASER_EMAIL</text>
+<!-- TX-49219-B -> Miami FL 33101 (BILLED_IN) -->
+<line marker-end="url(#arrow)" stroke="#3e484f" stroke-width="1.5" x1="490" x2="490" y1="280" y2="460"></line>
+<rect fill="#181c24" height="15" rx="3" width="60" x="460" y="365"></rect>
+<text fill="#bdc8d1" font-family="JetBrains Mono" font-size="9" font-weight="600" text-anchor="middle" x="490" y="376">BILLED_IN</text>
+<!-- TX-49219-B -> CoinBridge Wallet (NEXT) -->
+<line marker-end="url(#arrow)" stroke="#38bdf8" stroke-width="1.5" x1="490" x2="680" y1="280" y2="380"></line>
+<rect fill="#181c24" height="15" rx="3" width="45" x="568" y="318"></rect>
+<text fill="#38bdf8" font-family="JetBrains Mono" font-size="9" font-weight="600" text-anchor="middle" x="590" y="329">NEXT</text>
+<!-- CRITICAL COLLISION: DEV-F901-X8 <-> CUST-1049 Frozen Mule (CONNECTED_TO) -->
+<line marker-end="url(#arrow-alert)" stroke="#ffb4ab" stroke-dasharray="4,4" stroke-width="2.5" x1="650" x2="810" y1="210" y2="210"></line>
+<rect fill="#93000a" height="17" rx="3" width="94" x="702" y="195"></rect>
+<text fill="#ffdad6" font-family="JetBrains Mono" font-size="9" font-weight="700" text-anchor="middle" x="749" y="207">CONNECTED_TO</text>
+<!-- CUST-1049 -> Closed Case CL-2024-8841 (INVOLVES) -->
+<line marker-end="url(#arrow-alert)" stroke="#ffb4ab" stroke-width="1.5" x1="810" x2="890" y1="210" y2="350"></line>
+<rect fill="#181c24" height="15" rx="3" width="56" x="830" y="270"></rect>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="9" font-weight="600" text-anchor="middle" x="858" y="281">INVOLVES</text>
+<!-- MC 6610 (HHG-009) -> DEV-F901-X8 (ON_CARD) -->
+<line marker-end="url(#arrow)" stroke="#3e484f" stroke-width="1.5" x1="650" x2="650" y1="90" y2="210"></line>
+<rect fill="#181c24" height="15" rx="3" width="56" x="622" y="145"></rect>
+<text fill="#bdc8d1" font-family="JetBrains Mono" font-size="9" font-weight="600" text-anchor="middle" x="650" y="156">ON_CARD</text>
+</g>
+<!-- Nodes Group -->
+<g id="nodes-group">
+<!-- Node 1: Customer Edward Sterling (Focal Node) -->
+<g class="cursor-pointer group" onclick="selectNode('customer')" transform="translate(210, 260)">
+<circle fill="#0f131c" filter="url(#glow-cyan)" r="36" stroke="#8ed5ff" stroke-width="2"></circle>
+<circle fill="#181c24" r="30"></circle>
+<text dy="-4" fill="#8ed5ff" font-family="Inter" font-size="11" font-weight="700" text-anchor="middle">CUST-8831</text>
+<text dy="12" fill="#dfe2ee" font-family="Inter" font-size="9" text-anchor="middle">E. Sterling</text>
+<rect fill="#00354a" height="14" rx="2" width="70" x="-35" y="40"></rect>
+<text fill="#8ed5ff" font-family="JetBrains Mono" font-size="8" font-weight="600" text-anchor="middle" x="0" y="50">PRIMARY FOCAL</text>
+</g>
+<!-- Node 2: Card VISA 4912 -->
+<g class="cursor-pointer group" onclick="selectNode('card')" transform="translate(350, 180)">
+<circle fill="#181c24" r="26" stroke="#c0c1ff" stroke-width="1.5"></circle>
+<text dy="-2" fill="#c0c1ff" font-family="JetBrains Mono" font-size="9" font-weight="600" text-anchor="middle">VISA</text>
+<text dy="10" fill="#bdc8d1" font-family="JetBrains Mono" font-size="9" text-anchor="middle">•••• 4912</text>
+<text dy="36" fill="#87929a" font-family="Inter" font-size="9" text-anchor="middle">Active Card</text>
+</g>
+<!-- Node 3: Transaction TX-49219-B -->
+<g class="cursor-pointer group" onclick="selectNode('transaction')" transform="translate(490, 280)">
+<circle fill="#181c24" r="32" stroke="#38bdf8" stroke-width="2"></circle>
+<text dy="-6" fill="#38bdf8" font-family="JetBrains Mono" font-size="10" font-weight="700" text-anchor="middle">TX-49219-B</text>
+<text dy="8" fill="#dfe2ee" font-family="JetBrains Mono" font-size="10" font-weight="600" text-anchor="middle">$4,850.00</text>
+<text dy="20" fill="#ffb4ab" font-family="JetBrains Mono" font-size="8" text-anchor="middle">RISK: 92/100</text>
+</g>
+<!-- Node 4: Selected Target Node - DEV-F901-X8 -->
+<g class="cursor-pointer group" onclick="selectNode('device')" transform="translate(650, 210)">
+<circle fill="#262a33" filter="url(#glow-purple)" r="36" stroke="#c0c1ff" stroke-width="2.5"></circle>
+<circle fill="#1c2028" r="30"></circle>
+<path d="M -8 -8 L 8 -8 L 8 4 L -8 4 Z M -3 4 L -5 8 L 5 8 L 3 4 Z" fill="none" stroke="#c0c1ff" stroke-width="1.5"></path>
+<text dy="16" fill="#c0c1ff" font-family="JetBrains Mono" font-size="8" font-weight="700" text-anchor="middle">DEV-F901-X8</text>
+<rect fill="#93000a" height="15" rx="2" width="84" x="-42" y="-48"></rect>
+<text fill="#ffdad6" font-family="JetBrains Mono" font-size="8" font-weight="700" text-anchor="middle" x="0" y="-37">3x COLLISION</text>
+</g>
+<!-- Node 5: Email edward.sterling@proton.me -->
+<g class="cursor-pointer group" onclick="selectNode('email')" transform="translate(360, 390)">
+<circle fill="#181c24" r="22" stroke="#6ffbbe" stroke-width="1.5"></circle>
+<text dy="3" fill="#6ffbbe" font-family="Inter" font-size="8" font-weight="600" text-anchor="middle">EMAIL</text>
+<text dy="32" fill="#bdc8d1" font-family="JetBrains Mono" font-size="9" text-anchor="middle">edward.sterling@proton.me</text>
+</g>
+<!-- Node 6: Billing Region Miami FL -->
+<g class="cursor-pointer group" onclick="selectNode('region')" transform="translate(490, 460)">
+<circle fill="#181c24" r="22" stroke="#56e5a9" stroke-width="1.5"></circle>
+<text dy="3" fill="#56e5a9" font-family="Inter" font-size="8" font-weight="600" text-anchor="middle">REGION</text>
+<text dy="32" fill="#bdc8d1" font-family="Inter" font-size="9" text-anchor="middle">Miami, FL 33101</text>
+</g>
+<!-- Node 7: Customer 2 Mule CUST-1049 -->
+<g class="cursor-pointer group" onclick="selectNode('mule')" transform="translate(810, 210)">
+<circle fill="#181c24" filter="url(#glow-red)" r="30" stroke="#ffb4ab" stroke-width="2"></circle>
+<text dy="-4" fill="#ffb4ab" font-family="Inter" font-size="10" font-weight="700" text-anchor="middle">CUST-1049</text>
+<text dy="10" fill="#dfe2ee" font-family="Inter" font-size="9" text-anchor="middle">Frozen Mule</text>
+<rect fill="#93000a" height="13" rx="2" width="70" x="-35" y="35"></rect>
+<text fill="#ffdad6" font-family="JetBrains Mono" font-size="8" font-weight="700" text-anchor="middle" x="0" y="44">STATUS: FROZEN</text>
+</g>
+<!-- Node 8: Closed Case CL-2024-8841 -->
+<g class="cursor-pointer group" onclick="selectNode('case')" transform="translate(890, 350)">
+<polygon fill="#262a33" points="890,324 918,350 890,376 862,350" stroke="#ffb4ab" stroke-width="1.5"></polygon>
+<text dy="-2" fill="#ffb4ab" font-family="JetBrains Mono" font-size="8" font-weight="700" text-anchor="middle">CASE</text>
+<text dy="9" fill="#dfe2ee" font-family="JetBrains Mono" font-size="7" text-anchor="middle">8841</text>
+<text dy="34" fill="#ffb4ab" font-family="Inter" font-size="9" font-weight="600" text-anchor="middle">Mule Ring Alpha</text>
+</g>
+<!-- Node 9: Related Card MC 6610 (Case HHG-009) -->
+<g class="cursor-pointer group" onclick="selectNode('card2')" transform="translate(650, 90)">
+<circle fill="#181c24" r="24" stroke="#c0c1ff" stroke-width="1.5"></circle>
+<text dy="-2" fill="#c0c1ff" font-family="JetBrains Mono" font-size="8" font-weight="600" text-anchor="middle">MC •• 6610</text>
+<text dy="9" fill="#87929a" font-family="Inter" font-size="8" text-anchor="middle">HHG-009</text>
+<rect fill="#262a33" height="13" rx="2" width="60" x="-30" y="-32"></rect>
+<text fill="#bdc8d1" font-family="JetBrains Mono" font-size="7" text-anchor="middle" x="0" y="-23">LINKED CARD</text>
+</g>
+<!-- Node 10: Crypto Wallet CoinBridge -->
+<g class="cursor-pointer group" onclick="selectNode('crypto')" transform="translate(680, 380)">
+<circle fill="#181c24" r="26" stroke="#38bdf8" stroke-width="1.5"></circle>
+<text dy="-3" fill="#38bdf8" font-family="JetBrains Mono" font-size="8" font-weight="700" text-anchor="middle">WALLET</text>
+<text dy="9" fill="#bdc8d1" font-family="JetBrains Mono" font-size="7" text-anchor="middle">CoinBridge</text>
+<text dy="36" fill="#87929a" font-family="JetBrains Mono" font-size="8" text-anchor="middle">0x7a81...49f</text>
+</g>
+</g>
+</svg>
+<!-- Mini-map / Nav HUD Overlay in bottom-left -->
+<div class="absolute bottom-4 left-4 bg-surface-container-low/90 backdrop-blur p-space-sm rounded-lg shadow-md flex flex-col gap-1 w-44">
+<div class="flex items-center justify-between font-label-sm text-[9px] text-on-surface-variant">
+<span>GRAPH NAV HUD</span>
+<span class="text-tertiary">3.8ms GSQL</span>
+</div>
+<div class="w-full h-20 bg-surface-container-lowest rounded relative overflow-hidden flex items-center justify-center">
+<div class="w-3/4 h-3/4 bg-primary/5 rounded"></div>
+<div class="absolute w-8 h-8 rounded border-0 bg-primary/20 top-4 left-6"></div>
+<span class="material-symbols-outlined text-[14px] text-primary/40 absolute top-1 right-1">radar</span>
+</div>
+<div class="flex justify-between font-label-sm text-[9px] text-outline">
+<span>X: 419.2</span>
+<span>Y: -108.4</span>
+<span>FPS: 60.0</span>
+</div>
+</div>
+<!-- Quick Action Floating Bar Overlay in top-left -->
+<div class="absolute top-4 left-4 flex items-center gap-space-xs bg-surface-container-low/90 backdrop-blur px-2 py-1.5 rounded-lg shadow-sm">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" onclick="resetGraph()" title="Recenter View">
+<span class="material-symbols-outlined text-[16px]">filter_center_focus</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Auto-Cluster Grouping">
+<span class="material-symbols-outlined text-[16px]">bubble_chart</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Toggle Path Highlight">
+<span class="material-symbols-outlined text-[16px]">route</span>
+</button>
+<div class="h-3 w-px bg-surface-container-highest"></div>
+<span class="font-label-sm text-[9px] text-primary">DRAG &amp; ZOOM ENABLED</span>
+</div>
+</div>
+<!-- Right Inspector Drawer (Collapsible Entity Details) -->
+<div class="w-96 bg-surface-container-low flex flex-col h-full shadow-xl transition-all duration-200" id="inspector-drawer">
+<!-- Drawer Header -->
+<div class="flex items-center justify-between px-space-md py-space-sm bg-surface-container-highest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-[18px]">devices</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">ENTITY INSPECTOR</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="bg-error-container text-on-error-container font-label-sm text-label-sm px-1.5 py-0.5 rounded font-bold">HIGH RISK HUB</span>
+<button class="p-1 rounded hover:bg-surface-container text-outline hover:text-on-surface" onclick="toggleDrawer()">
+<span class="material-symbols-outlined text-[16px]" id="drawer-toggle-icon">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Drawer Content -->
+<div class="flex-1 overflow-y-auto p-space-md flex flex-col gap-space-md">
+<!-- Selected Node Hero Header -->
+<div class="flex flex-col gap-1 bg-surface-container p-space-md rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Target ID</span>
+<span class="bg-surface-container-high text-secondary-fixed-dim font-label-sm text-label-sm px-2 py-0.5 rounded font-mono">DEVICE</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface font-bold tracking-tight">DEV-F901-X8</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Spoofed Windows 11 Chrome (UserAgent Anomaly)</span>
+</div>
+<!-- Telemetry Indicators Grid -->
+<div class="grid grid-cols-3 gap-space-xs">
+<div class="flex flex-col bg-surface-container p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-outline">IN-DEGREE</span>
+<span class="font-headline-md text-headline-md text-on-surface">4</span>
+<span class="font-label-sm text-[9px] text-tertiary">Normal +1</span>
+</div>
+<div class="flex flex-col bg-surface-container p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-outline">OUT-DEGREE</span>
+<span class="font-headline-md text-headline-md text-on-surface">2</span>
+<span class="font-label-sm text-[9px] text-outline">Standard</span>
+</div>
+<div class="flex flex-col bg-surface-container p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-outline">CENTRALITY</span>
+<span class="font-headline-md text-headline-md text-error">0.82</span>
+<span class="font-label-sm text-[9px] text-error font-semibold">CRITICAL HUB</span>
+</div>
+</div>
+<!-- Multi-Account Collision Alert Card -->
+<div class="flex flex-col gap-space-xs bg-error-container/20 p-space-md rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[18px]">warning</span>
+<span class="font-headline-sm text-headline-sm text-error">MULTI-ACCOUNT COLLISION</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+            3 distinct identity profiles logged in from this hardware fingerprint within the last 24-hour cycle. Direct linkage confirmed to historical fraud syndicate ring.
+          </p>
+<div class="flex flex-col gap-1 mt-1 font-label-sm text-label-sm">
+<div class="flex items-center justify-between py-1 bg-surface-container-low px-2 rounded">
+<span class="text-on-surface">CUST-8831 (Edward Sterling)</span>
+<span class="text-primary font-semibold">Active Victim</span>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container-low px-2 rounded">
+<span class="text-on-surface">CUST-1049 (Frozen Mule)</span>
+<span class="text-error font-semibold">FLAGGED MULE</span>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container-low px-2 rounded">
+<span class="text-on-surface">CUST-4102 (HHG-009 Link)</span>
+<span class="text-error font-semibold">CONFIRMED STOLEN</span>
+</div>
+</div>
+</div>
+<!-- Technical Attributes Table -->
+<div class="flex flex-col gap-1 bg-surface-container p-space-md rounded-lg">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-1">Fingerprint Forensics</span>
+<div class="flex justify-between py-1 bg-surface-container-low px-2 rounded font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Hardware Canvas Hash</span>
+<span class="text-on-surface font-mono">0x93FA...012C</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-low px-2 rounded font-label-sm text-label-sm">
+<span class="text-on-surface-variant">WebGL Renderer</span>
+<span class="text-on-surface truncate max-w-[140px]">ANGLE (NVIDIA RTX 4070)</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-low px-2 rounded font-label-sm text-label-sm">
+<span class="text-on-surface-variant">IP Origin</span>
+<span class="text-on-surface font-mono">198.54.122.90 (Tor Exit)</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-low px-2 rounded font-label-sm text-label-sm">
+<span class="text-on-surface-variant">First Seen</span>
+<span class="text-on-surface">2025-02-14 02:11:40 UTC</span>
+</div>
+</div>
+<!-- Executed TigerGraph Query Display -->
+<div class="flex flex-col gap-1.5 bg-surface-container-lowest p-space-md rounded-lg">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline uppercase tracking-wider">Executed GSQL Query</span>
+<span class="text-tertiary font-mono">3.8ms runtime</span>
+</div>
+<pre class="bg-surface-container-low p-2 rounded text-primary font-code-md text-[10px] leading-tight overflow-x-auto selection:bg-primary-container"><code>INTERPRET QUERY (target_id="CUST-8831") 
+FOR GRAPH FraudDetectionGraph {
+  Start = {target_id};
+  Collisions = SELECT t FROM Start:s - (OWNS&gt;|FROM_DEVICE&gt;:<connected_to) +="t.betweenness;" -="" :t="" @@centrality="" accum="" code="" collisions;="" print="" }<=""></connected_to)></code></pre>
+</div>
+<!-- Decision Quick Rail in Inspector -->
+<div class="flex flex-col gap-2 mt-auto pt-2">
+<button class="w-full bg-error text-on-error font-headline-sm text-headline-sm py-2 rounded flex items-center justify-center gap-1.5 hover:bg-error-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span>BLACKLIST HARDWARE HASH</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md py-1.5 rounded flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>ISOLATE CLUSTER</span>
+</button>
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md py-1.5 rounded flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">share</span>
+<span>ATTACH EVIDENCE</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Graph Canvas Controller Script -->
+<script>
+    let currentZoom = 100;
+    const svgEl = document.getElementById('network-svg');
+    const zoomText = document.getElementById('zoom-val');
+    let isDrawerOpen = true;
+
+    function adjustZoom(delta) {
+      currentZoom = Math.min(Math.max(currentZoom + delta, 40), 200);
+      zoomText.innerText = currentZoom + '%';
+      updateTransform();
+    }
+
+    function resetGraph() {
+      currentZoom = 100;
+      zoomText.innerText = '100%';
+      svgEl.style.transform = 'translate(0px, 0px) scale(1)';
+    }
+
+    function updateTransform() {
+      const scale = currentZoom / 100;
+      svgEl.style.transform = `scale(${scale})`;
+      svgEl.style.transformOrigin = '50% 50%';
+    }
+
+    function toggleDrawer() {
+      const drawer = document.getElementById('inspector-drawer');
+      const icon = document.getElementById('drawer-toggle-icon');
+      if (isDrawerOpen) {
+        drawer.style.width = '0px';
+        drawer.style.opacity = '0';
+        drawer.style.pointerEvents = 'none';
+        icon.innerText = 'chevron_left';
+      } else {
+        drawer.style.width = '24rem';
+        drawer.style.opacity = '1';
+        drawer.style.pointerEvents = 'auto';
+        icon.innerText = 'chevron_right';
+      }
+      isDrawerOpen = !isDrawerOpen;
+    }
+
+    function selectNode(type) {
+      // Micro-interaction when clicking graph nodes
+      const drawer = document.getElementById('inspector-drawer');
+      if (!isDrawerOpen) toggleDrawer();
+    }
+  </script>
+</div></main></div><footer class="fixed bottom-0 left-0 right-0 h-8 z-40 bg-surface-container-lowest flex items-center justify-between px-space-lg select-none"><div class="flex items-center gap-space-md font-label-sm text-label-sm"><div class="flex items-center gap-1.5 text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>GSQL Autonomous Investigation Daemon:</span><span class="text-tertiary font-semibold">RUNNING</span></div><span class="text-outline-variant">|</span><span class="text-outline">ACTIVE THREADS: 12</span><span class="text-outline-variant">|</span><span class="text-outline">IOPS: 18.2K</span></div><div class="flex items-center gap-space-md font-label-sm text-label-sm"><span class="text-on-surface-variant">AUDIT SEC:</span><span class="text-primary">SOC2 Type II / PCI-DSS L1 Compliant</span><span class="text-outline-variant">|</span><span class="text-outline">SESSION ID: #SOC-88219-B</span></div></footer></body></html>

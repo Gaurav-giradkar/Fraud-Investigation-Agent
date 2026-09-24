@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error":"#690005","surface-container":"#1c2028","surface-tint":"#7bd0ff","on-tertiary-fixed-variant":"#005236","on-secondary-fixed-variant":"#2f2ebe","on-primary":"#00354a","surface-bright":"#353942","surface-dim":"#0f131c","surface-variant":"#31353e","primary":"#8ed5ff","primary-fixed":"#c4e7ff","inverse-primary":"#00668a","tertiary":"#56e5a9","on-tertiary-container":"#004e34","inverse-on-surface":"#2c3039","surface-container-low":"#181c24","on-primary-fixed":"#001e2c","error":"#ffb4ab","on-primary-fixed-variant":"#004c69","surface-container-highest":"#31353e","inverse-surface":"#dfe2ee","on-error-container":"#ffdad6","tertiary-fixed":"#6ffbbe","on-primary-container":"#004965","secondary-fixed-dim":"#c0c1ff","on-tertiary":"#003824","outline":"#87929a","background":"#0f131c","secondary":"#c0c1ff","error-container":"#93000a","secondary-fixed":"#e1e0ff","tertiary-fixed-dim":"#4edea3","on-surface":"#dfe2ee","on-surface-variant":"#bdc8d1","outline-variant":"#3e484f","on-secondary-container":"#b0b2ff","primary-fixed-dim":"#7bd0ff","surface-container-lowest":"#0a0e16","surface":"#0f131c","on-secondary-fixed":"#07006c","secondary-container":"#3131c0","on-tertiary-fixed":"#002113","on-secondary":"#1000a9","tertiary-container":"#30c88f","primary-container":"#38bdf8","surface-container-high":"#262a33","on-background":"#dfe2ee"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-md":"0.5rem","space-xl":"1rem","space-sm":"0.375rem","space-xs":"0.25rem","space-lg":"0.75rem","gutter":"0.5rem","margin":"0.75rem"},fontFamily:{"body-md":["Inter"],"body-lg":["Inter"],"headline-sm":["Inter"],"label-lg":["JetBrains Mono"],"label-md":["JetBrains Mono"],"body-sm":["Inter"],"label-sm":["JetBrains Mono"],"headline-lg":["Inter"],"headline-md":["Inter"],"code-md":["JetBrains Mono"]},fontSize:{"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"body-lg":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-sm":["14px",{"lineHeight":"18px","fontWeight":"600"}],"label-lg":["13px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"label-md":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"12px","letterSpacing":"0.06em","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["16px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}],"code-md":["12px",{"lineHeight":"16px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-14 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.4)] flex items-center justify-between px-space-lg select-none"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Fraud Investigation Agent Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xdp9l8SuUnfq8mAGR_H_SKkzXyxG7a1yvs2w5_zBWRl2gLc0xNagiIgDpt3AkzFQUmJA5rryL37bJbZpWenWfdfRz0qehJoczB9jd5q4Hue5zeHuzFAjTaS0ZhVNFmfOEe47mBNX-XK6IyTIW5gbCT19Wq6gFmtn9bB4NHmMoEYb63aCTYjyWi1-7Q_gVDJKZCcC15GRXtJ_920uPb5mfH_zEYCakLfcSy8ZLnSNs"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight uppercase leading-none">TIGERGRAPH</span><span class="font-label-sm text-label-sm text-primary tracking-widest leading-none mt-0.5">FRAUD OPS COCKPIT</span></div></div><div class="h-6 w-px bg-surface-container-high"></div><div class="hidden xl:flex items-center gap-space-md font-label-sm text-label-sm bg-surface-container-low px-space-md py-1 rounded"><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span><span class="text-on-surface font-medium">TG CLUSTER: ONLINE</span><span class="text-outline font-normal">(v3.9.2-ent)</span></div><span class="text-outline-variant">|</span><div class="flex items-center gap-1 text-on-surface-variant"><span>LATENCY:</span><span class="text-primary font-medium">4.2ms</span></div><span class="text-outline-variant">|</span><div class="flex items-center gap-1 text-on-surface-variant"><span>NODES:</span><span class="text-on-surface font-medium">14.2M</span></div><span class="text-outline-variant">|</span><div class="flex items-center gap-1 text-on-surface-variant"><span>EDGES:</span><span class="text-on-surface font-medium">88.6M</span></div></div></div><div class="flex items-center gap-space-md flex-1 max-w-xl mx-space-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full bg-surface-container-low text-on-surface placeholder:text-outline font-label-md text-label-md pl-9 pr-14 py-1.5 rounded outline-none focus:bg-surface-container" placeholder="Query Case ID, Entity, Card, or Txn Hash..." type="text"/><kbd class="absolute right-2 top-1/2 -translate-y-1/2 bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-1.5 py-0.5 rounded shadow-sm">⌘K</kbd></div><div class="hidden lg:flex items-center gap-1.5 bg-surface-container-low px-space-md py-1 rounded whitespace-nowrap"><span class="w-2 h-2 rounded-full bg-error animate-ping"></span><span class="font-label-sm text-label-sm text-on-surface-variant">CASE:</span><span class="font-label-sm text-label-sm text-error font-medium">HHG-014</span><span class="font-label-sm text-label-sm text-on-surface-variant">(92/100 · CRITICAL)</span><span class="material-symbols-outlined text-outline text-[16px]">expand_more</span></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><button class="relative p-1.5 rounded bg-surface-container-low hover:bg-surface-container-high transition-colors text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[20px]">notifications_active</span><span class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-error text-on-error font-label-sm text-[9px] font-bold">3</span></button><button class="p-1.5 rounded bg-surface-container-low hover:bg-surface-container-high transition-colors text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[20px]">terminal</span></button></div><div class="h-6 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwEbji1-sugWItTnLLpVZ-8Un5QHHlwqgf-6HmmoInRgrYK7t7SBbOZULEq7AhFG2MMvNQ0j5bJMw3V4avBVMQ1PkcA2KEk4ghV_j0ilVryXY5wvxFEzfB0jJ6uQeFOESOdfA0SayB7b3Z7WoB7i7gcOvvCq8BpXDbBbawh_4bTmqDrSI_2n0DI-9BhZ0U4jtHd21iGstbQOlRkGx1_2fKiuQncfrJXPfCnIGbGQ"/><span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-tertiary ring-2 ring-surface-container-lowest"></span></div><div class="hidden md:flex flex-col text-left"><span class="font-label-sm text-label-sm text-on-surface font-semibold leading-tight">S. Vance</span><span class="font-label-sm text-label-sm text-tertiary text-[9px] leading-tight">L3 LEAD · ACTIVE SHIFT</span></div></div></div></header><aside class="fixed left-0 top-14 bottom-8 w-64 bg-surface-container-lowest z-40 flex flex-col justify-between py-space-md select-none"><div class="flex flex-col gap-space-sm px-space-xs"><div class="px-space-md py-1 font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center justify-between"><span>Mission Directives</span><span class="font-code-md text-code-md text-primary font-bold">GSQL v3</span></div><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-high text-primary font-bold border-l-2 border-primary-container"><a class="flex items-center gap-space-md px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">space_dashboard</span><span class="font-body-sm text-body-sm">DASHBOARD</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="cases" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">list_alt</span><span class="font-body-sm text-body-sm">CASE EXPLORER</span></div><span class="font-label-sm text-label-sm bg-surface-container-high px-1.5 py-0.5 rounded text-on-surface-variant">20</span></a><a class="flex items-center gap-space-md px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="workspace" href="#"><span class="material-symbols-outlined text-[18px]">biotech</span><span class="font-body-sm text-body-sm">INVESTIGATION WORKSPACE</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-2 rounded transition-colors bg-surface-container-high text-primary font-bold border-l-2 border-primary-container" data-path="evidence" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span class="font-body-sm text-body-sm">EVIDENCE VIEW</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="graph" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">hub</span><span class="font-body-sm text-body-sm">GRAPH VIEW</span></div><span class="font-label-sm text-label-sm text-tertiary bg-surface-container-high px-1 py-0.5 rounded">LIVE</span></a><a class="flex items-center gap-space-md px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="agent-activity" href="#"><span class="material-symbols-outlined text-[18px]">smart_toy</span><span class="font-body-sm text-body-sm">AGENT ACTIVITY</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="evidence-request" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">dynamic_form</span><span class="font-body-sm text-body-sm">EVIDENCE REQUEST</span></div><span class="font-label-sm text-label-sm text-error bg-error-container/40 px-1 py-0.5 rounded">1 PENDING</span></a><a class="flex items-center gap-space-md px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="next-best-action" href="#"><span class="material-symbols-outlined text-[18px]">crisis_alert</span><span class="font-body-sm text-body-sm">NEXT BEST ACTION</span></a><a class="flex items-center gap-space-md px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="history" href="#"><span class="material-symbols-outlined text-[18px]">history_toggle_off</span><span class="font-body-sm text-body-sm">CASE HISTORY</span></a></nav></div><div class="px-space-md"><div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1"><div class="flex items-center justify-between font-label-sm text-label-sm"><span class="text-outline">AGENT ENGINE</span><span class="text-tertiary">AUTONOMOUS</span></div><div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden"><div class="bg-tertiary h-full w-4/5 animate-pulse"></div></div><div class="flex items-center justify-between font-label-sm text-[9px] text-on-surface-variant"><span class="text-on-surface-variant">CPU: 18.4%</span><span class="text-on-surface-variant">MEM: 41.2GB</span></div></div></div></aside><div class="pl-64"><main class="relative w-full pt-14 pb-8 min-h-screen bg-surface"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-space-md p-space-lg select-none">
+<!-- Top Telemetry & Evidence Overview Bar -->
+<div class="bg-surface-container-low rounded p-space-md shadow-sm flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-space-sm bg-surface-container px-space-md py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">ACTIVE DOSSIER</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">CASE HHG-014</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-primary">inventory_2</span>
+<span>9 Evidence Items Indexed</span>
+</div>
+<div class="h-4 w-px bg-surface-container-highest hidden sm:block"></div>
+<div class="flex items-center gap-space-sm bg-error-container/30 px-space-md py-1 rounded">
+<span class="material-symbols-outlined text-error text-[16px]">gavel</span>
+<span class="font-label-sm text-label-sm text-error font-bold">AGGREGATE STRENGTH: 94.6% (CRITICAL CONFIDENCE)</span>
+</div>
+<div class="hidden 2xl:flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span>GSQL HASH:</span>
+<span class="text-outline font-code-md">0x8a9f...c31b</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">verified_user</span>
+</div>
+</div>
+<!-- Action Trigger Buttons -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-1.5 bg-surface-container hover:bg-surface-container-high px-space-md py-1.5 rounded text-on-surface text-body-sm font-body-sm transition-colors shadow-sm" id="reqEvidenceBtn">
+<span class="material-symbols-outlined text-[16px] text-primary">add_link</span>
+<span>Request Corroborating Evidence</span>
+</button>
+<button class="flex items-center gap-1.5 bg-surface-container hover:bg-surface-container-high px-space-md py-1.5 rounded text-on-surface text-body-sm font-body-sm transition-colors shadow-sm" id="exportDossierBtn">
+<span class="material-symbols-outlined text-[16px] text-outline">file_download</span>
+<span>Export Signed Dossier (JSON/PDF)</span>
+</button>
+<a class="flex items-center gap-1.5 bg-error text-on-error hover:bg-error/90 font-label-sm text-label-sm px-space-lg py-1.5 rounded font-bold transition-all shadow-sm" data-path="next-best-action" href="#">
+<span class="material-symbols-outlined text-[16px]">crisis_alert</span>
+<span>PROCEED TO NEXT BEST ACTION</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Filter Matrix & Source Breakdown Strip -->
+<div class="bg-surface-container-lowest rounded p-space-sm shadow-sm flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-1 text-label-sm font-label-sm">
+<span class="text-outline px-space-sm">FILTER SEVERITY:</span>
+<button class="filter-chip bg-primary text-on-primary px-space-md py-1 rounded font-bold" data-filter="all">ALL (9)</button>
+<button class="filter-chip bg-surface-container-low hover:bg-surface-container text-error px-space-md py-1 rounded" data-filter="critical">CRITICAL / HIGH (6)</button>
+<button class="filter-chip bg-surface-container-low hover:bg-surface-container text-secondary px-space-md py-1 rounded" data-filter="medium">MEDIUM (2)</button>
+<button class="filter-chip bg-surface-container-low hover:bg-surface-container text-tertiary px-space-md py-1 rounded" data-filter="supporting">SUPPORTING (1)</button>
+</div>
+<div class="flex items-center gap-space-sm overflow-x-auto text-label-sm font-label-sm text-on-surface-variant bg-surface-container-low px-space-md py-1 rounded">
+<span class="text-outline whitespace-nowrap">SOURCES CONNECTED:</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded text-primary font-code-md">TG-GSQL Engine</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded text-tertiary font-code-md">Network DPI</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded text-secondary font-code-md">Telco SS7/SIM API</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded text-outline font-code-md">TSYS Gateway</span>
+</div>
+</div>
+<!-- Evidence Matrix Grid (9 Strict Technical Categories) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md" id="evidenceGrid">
+<!-- 1. Transaction Evidence -->
+<div class="evidence-card bg-surface-container-low rounded p-space-md shadow-sm flex flex-col justify-between hover:bg-surface-container/90 transition-colors" data-severity="critical">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="p-1 rounded bg-error/15 text-error material-symbols-outlined text-[18px]">payments</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">01. TRANSACTION EVIDENCE</span>
+</div>
+<span class="font-label-sm text-label-sm bg-error text-on-error font-bold px-1.5 py-0.5 rounded">96% CRITICAL</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">TX-49219-B ($4,850.00 USD)</h3>
+<p class="font-label-sm text-label-sm text-primary mt-0.5">MCC 6051 • CoinBridge Global Ltd</p>
+</div>
+<div class="bg-surface-container p-space-sm rounded">
+<p class="font-body-sm text-body-sm text-on-surface">
+              High-risk quasi-cash crypto on-ramp transaction. Volume deviation analysis indicates a <span class="text-error font-semibold">+940% spike</span> over baseline 90-day moving median expenditure.
+            </p>
+</div>
+<!-- Forensic Visual Bar -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-[9px] text-outline">
+<span>SPIKE DEVIATION: 9.4x BASELINE</span>
+<span class="text-error font-bold">+940%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-error h-full" style="width: 96%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm mt-space-sm font-label-sm text-[10px] text-outline">
+<span class="truncate flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">router</span>
+            Auth Gateway (TSYS Clearing)
+          </span>
+<span class="font-code-md text-on-surface-variant">11:36:12 UTC</span>
+</div>
+</div>
+<!-- 2. Customer History -->
+<div class="evidence-card bg-surface-container-low rounded p-space-md shadow-sm flex flex-col justify-between hover:bg-surface-container/90 transition-colors" data-severity="critical">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="p-1 rounded bg-secondary-container/30 text-secondary material-symbols-outlined text-[18px]">account_box</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">02. CUSTOMER HISTORY</span>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary text-on-secondary font-bold px-1.5 py-0.5 rounded">78% HIGH</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">CUST-8831 Account Profile</h3>
+<p class="font-label-sm text-label-sm text-secondary mt-0.5">Behavioral Vector Shift Detected</p>
+</div>
+<div class="bg-surface-container p-space-sm rounded">
+<p class="font-body-sm text-body-sm text-on-surface">
+              4.2-year pristine history with zero prior chargebacks. However, primary authentication attributes (cell carrier, verified email) were violently re-routed <span class="text-secondary font-semibold">within 48h</span> of current transaction attempt.
+            </p>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-[9px] text-outline">
+<span>PROFILE DISRUPTION SCORE</span>
+<span class="text-secondary font-bold">78/100</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full" style="width: 78%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm mt-space-sm font-label-sm text-[10px] text-outline">
+<span class="truncate flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-secondary">database</span>
+            Core Banking CRM (Finacle)
+          </span>
+<span class="font-code-md text-on-surface-variant">2d ago (T-48h)</span>
+</div>
+</div>
+<!-- 3. Card History -->
+<div class="evidence-card bg-surface-container-low rounded p-space-md shadow-sm flex flex-col justify-between hover:bg-surface-container/90 transition-colors" data-severity="critical">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="p-1 rounded bg-secondary-container/30 text-secondary material-symbols-outlined text-[18px]">credit_card</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">03. CARD HISTORY</span>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary text-on-secondary font-bold px-1.5 py-0.5 rounded">84% HIGH</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Card •••• 4912 Utilization Pattern</h3>
+<p class="font-label-sm text-label-sm text-outline mt-0.5">BIN: 411832 (Visa Infinite Signature)</p>
+</div>
+<div class="bg-surface-container p-space-sm rounded">
+<p class="font-body-sm text-body-sm text-on-surface">
+              Lifetime stats show 0 cross-border or quasi-cash transactions. First recorded eCommerce attempt bypassing 3-D Secure biometric challenge; routed via forced fallback flag.
+            </p>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-[9px] text-outline">
+<span>UNUSUAL MCC CONFIDENCE</span>
+<span class="text-secondary font-bold">84%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full" style="width: 84%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm mt-space-sm font-label-sm text-[10px] text-outline">
+<span class="truncate flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">speed</span>
+            Card Processor (TSYS Issuing)
+          </span>
+<span class="font-code-md text-on-surface-variant">6m ago</span>
+</div>
+</div>
+<!-- 4. Device Connections -->
+<div class="evidence-card bg-surface-container-low rounded p-space-md shadow-sm flex flex-col justify-between hover:bg-surface-container/90 transition-colors" data-severity="critical">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="p-1 rounded bg-error/15 text-error material-symbols-outlined text-[18px]">devices</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">04. DEVICE CONNECTIONS</span>
+</div>
+<span class="font-label-sm text-label-sm bg-error text-on-error font-bold px-1.5 py-0.5 rounded">98% CRITICAL</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Fingerprint DEV-F901-X8</h3>
+<p class="font-label-sm text-label-sm text-error mt-0.5">WebGL &amp; Canvas Anti-Spoof Fail</p>
+</div>
+<div class="bg-surface-container p-space-sm rounded">
+<p class="font-body-sm text-body-sm text-on-surface">
+              Canvas entropy tampering flagged. Device hash matches direct 1-hop link in TigerGraph to known mule identity <span class="text-error font-mono font-semibold">CUST-1049</span> (frozen for Syndicate 9 fraud).
+            </p>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-[9px] text-outline">
+<span>MULE ENTITY OVERLAP PROBABILITY</span>
+<span class="text-error font-bold">98.2%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-error h-full" style="width: 98%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm mt-space-sm font-label-sm text-[10px] text-outline">
+<span class="truncate flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-tertiary">hub</span>
+            TG GSQL Sub-graph Query
+          </span>
+<span class="font-code-md text-on-surface-variant">11:36:15 UTC</span>
+</div>
+</div>
+<!-- 5. Email Connections -->
+<div class="evidence-card bg-surface-container-low rounded p-space-md shadow-sm flex flex-col justify-between hover:bg-surface-container/90 transition-colors" data-severity="critical">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="p-1 rounded bg-error/15 text-error material-symbols-outlined text-[18px]">alternate_email</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">05. EMAIL CONNECTIONS</span>
+</div>
+<span class="font-label-sm text-label-sm bg-error text-on-error font-bold px-1.5 py-0.5 rounded">89% CRITICAL</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-code-md">edward.sterling@proton.me</h3>
+<p class="font-label-sm text-label-sm text-error mt-0.5">Domain Age: 52h • Dark Web Exposure</p>
+</div>
+<div class="bg-surface-container p-space-sm rounded">
+<p class="font-body-sm text-body-sm text-on-surface">
+              Discovered in dark-web raw credential dump <span class="text-primary font-mono">Combo-List-Feb25</span> 14 hours ago. Identity newly established on privacy-first MX host directly before funds extraction.
+            </p>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-[9px] text-outline">
+<span>BREACH EXPOSURE SEVERITY</span>
+<span class="text-error font-bold">89%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-error h-full" style="width: 89%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm mt-space-sm font-label-sm text-[10px] text-outline">
+<span class="truncate flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-error">security</span>
+            SpyCloud / HIBP Threat Feed
+          </span>
+<span class="font-code-md text-on-surface-variant">14h ago</span>
+</div>
+</div>
+<!-- 6. Billing-Region Connections -->
+<div class="evidence-card bg-surface-container-low rounded p-space-md shadow-sm flex flex-col justify-between hover:bg-surface-container/90 transition-colors" data-severity="critical">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="p-1 rounded bg-error/15 text-error material-symbols-outlined text-[18px]">travel_explore</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">06. BILLING REGION</span>
+</div>
+<span class="font-label-sm text-label-sm bg-error text-on-error font-bold px-1.5 py-0.5 rounded">95% CRITICAL</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">San Francisco, CA ➔ Miami, FL</h3>
+<p class="font-label-sm text-label-sm text-error mt-0.5">Impossible Velocity: 647 mph</p>
+</div>
+<div class="bg-surface-container p-space-sm rounded">
+<p class="font-body-sm text-body-sm text-on-surface">
+              Card used in Zip 33101 (Miami) only 4 hours after verified physical chip dip at a SF cafe. Calculated speed exceeds commercial airline flight envelopes without verified flight manifests.
+            </p>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-[9px] text-outline">
+<span>PHYSICAL IMPOSSIBILITY METRIC</span>
+<span class="text-error font-bold">95%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-error h-full" style="width: 95%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm mt-space-sm font-label-sm text-[10px] text-outline">
+<span class="truncate flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">pin_drop</span>
+            GeoIP &amp; Settlement Clearing
+          </span>
+<span class="font-code-md text-on-surface-variant">11:36:12 UTC</span>
+</div>
+</div>
+<!-- 7. Related Cards -->
+<div class="evidence-card bg-surface-container-low rounded p-space-md shadow-sm flex flex-col justify-between hover:bg-surface-container/90 transition-colors" data-severity="medium">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="p-1 rounded bg-secondary-container/30 text-secondary material-symbols-outlined text-[18px]">credit_card_heart</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">07. RELATED CARDS</span>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary text-on-secondary font-bold px-1.5 py-0.5 rounded">82% HIGH</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">3 Linked Card Artifacts</h3>
+<p class="font-label-sm text-label-sm text-outline mt-0.5">•••• 8812, •••• 4912, •••• 1109</p>
+</div>
+<div class="bg-surface-container p-space-sm rounded">
+<p class="font-body-sm text-body-sm text-on-surface">
+              TigerGraph entity resolution discovered 2 other active cards under completely different owner profiles sharing identical internal WebRTC gateway IP <span class="text-primary font-mono">172.56.21.90</span>.
+            </p>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-[9px] text-outline">
+<span>SHARED NETWORK PROBABILITY</span>
+<span class="text-secondary font-bold">82%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full" style="width: 82%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm mt-space-sm font-label-sm text-[10px] text-outline">
+<span class="truncate flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-tertiary">hub</span>
+            TG Entity Resolution Engine
+          </span>
+<span class="font-code-md text-on-surface-variant">11:36:16 UTC</span>
+</div>
+</div>
+<!-- 8. Previous Closed Cases -->
+<div class="evidence-card bg-surface-container-low rounded p-space-md shadow-sm flex flex-col justify-between hover:bg-surface-container/90 transition-colors" data-severity="critical">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="p-1 rounded bg-error/15 text-error material-symbols-outlined text-[18px]">history_edu</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">08. PREVIOUS CLOSED CASES</span>
+</div>
+<span class="font-label-sm text-label-sm bg-error text-on-error font-bold px-1.5 py-0.5 rounded">92% CRITICAL</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Case CL-2024-8841 Cluster</h3>
+<p class="font-label-sm text-label-sm text-error mt-0.5">Syndicate "Mule Ring Alpha" Match</p>
+</div>
+<div class="bg-surface-container p-space-sm rounded">
+<p class="font-body-sm text-body-sm text-on-surface">
+              Exact cryptographic wallet cluster destination matches closed case CL-2024-8841 ($54,000 net fraud write-off). Direct graph edge found with 3 hops to Case HHG-009.
+            </p>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-[9px] text-outline">
+<span>HISTORICAL TOPOLOGY OVERLAP</span>
+<span class="text-error font-bold">92%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-error h-full" style="width: 92%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm mt-space-sm font-label-sm text-[10px] text-outline">
+<span class="truncate flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary">account_tree</span>
+            Vector Archival Graph
+          </span>
+<span class="font-code-md text-on-surface-variant">11:36:18 UTC</span>
+</div>
+</div>
+<!-- 9. Fraud Patterns -->
+<div class="evidence-card bg-surface-container-low rounded p-space-md shadow-sm flex flex-col justify-between hover:bg-surface-container/90 transition-colors" data-severity="critical">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="p-1 rounded bg-error/15 text-error material-symbols-outlined text-[18px]">schema</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">09. FRAUD PATTERNS</span>
+</div>
+<span class="font-label-sm text-label-sm bg-error text-on-error font-bold px-1.5 py-0.5 rounded">94% CRITICAL</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Pattern #G-8819 Execution</h3>
+<p class="font-label-sm text-label-sm text-primary mt-0.5">Fast ATO ➔ SIM Swap ➔ Crypto Drain</p>
+</div>
+<div class="bg-surface-container p-space-sm rounded">
+<p class="font-body-sm text-body-sm text-on-surface">
+              Matched 6 of 6 deterministic sub-graph predicates. Graph neural network computes an isomorphic graph alignment similarity score of <span class="text-tertiary font-bold">0.89</span> against automated ATO attacks.
+            </p>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-[9px] text-outline">
+<span>TYPOLOGY MATCH STRENGTH</span>
+<span class="text-error font-bold">94%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-error h-full" style="width: 94%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm mt-space-sm font-label-sm text-[10px] text-outline">
+<span class="truncate flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-tertiary">psychology</span>
+            ML GNN Policy Engine
+          </span>
+<span class="font-code-md text-on-surface-variant">11:36:20 UTC</span>
+</div>
+</div>
+</div>
+<!-- Forensic Chain of Custody & Attestation Footer -->
+<div class="bg-surface-container-low rounded p-space-md shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md text-label-sm font-label-sm">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-tertiary text-[20px]">fingerprint</span>
+<div class="flex flex-col">
+<span class="text-on-surface font-semibold">TIGERGRAPH CRYPTOGRAPHIC PROVENANCE ATTESTATION</span>
+<span class="text-outline">Dossier sealed with SHA-256 Merkle Graph Hash: <span class="text-on-surface-variant font-code-md">7c31e984f183bbad0021bdf484439c2d</span></span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="text-on-surface-variant">Audit Level:</span>
+<span class="bg-surface-container-highest text-tertiary px-2 py-0.5 rounded font-mono font-bold">LEVEL-3 FORENSIC GRADE</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const filterButtons = document.querySelectorAll('.filter-chip');
+    const cards = document.querySelectorAll('.evidence-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Toggle active visual states
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary', 'font-bold');
+          b.classList.add('bg-surface-container-low', 'hover:bg-surface-container');
+        });
+        btn.classList.remove('bg-surface-container-low', 'hover:bg-surface-container');
+        btn.classList.add('bg-primary', 'text-on-primary', 'font-bold');
+
+        const filter = btn.getAttribute('data-filter');
+        cards.forEach(card => {
+          const sev = card.getAttribute('data-severity');
+          if (filter === 'all') {
+            card.style.display = 'flex';
+          } else if (filter === 'critical' && sev === 'critical') {
+            card.style.display = 'flex';
+          } else if (filter === 'medium' && sev === 'medium') {
+            card.style.display = 'flex';
+          } else if (filter === 'supporting' && sev === 'supporting') {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    const exportBtn = document.getElementById('exportDossierBtn');
+    if (exportBtn) {
+      exportBtn.addEventListener('click', () => {
+        const originalText = exportBtn.innerHTML;
+        exportBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] text-tertiary animate-spin">sync</span> <span>Generating Cryptographic Archive...</span>';
+        setTimeout(() => {
+          exportBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span> <span>Dossier Exported (Signed)</span>';
+          setTimeout(() => {
+            exportBtn.innerHTML = originalText;
+          }, 2400);
+        }, 900);
+      });
+    }
+
+    const reqBtn = document.getElementById('reqEvidenceBtn');
+    if (reqBtn) {
+      reqBtn.addEventListener('click', () => {
+        const originalText = reqBtn.innerHTML;
+        reqBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] text-primary animate-pulse">satellite_alt</span> <span>Polling Carrier SS7 & Clearinghouse...</span>';
+        setTimeout(() => {
+          reqBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] text-tertiary">done_all</span> <span>All Sources Current</span>';
+          setTimeout(() => {
+            reqBtn.innerHTML = originalText;
+          }, 2000);
+        }, 1200);
+      });
+    }
+  })();
+</script></main></div><footer class="fixed bottom-0 left-0 right-0 h-8 z-40 bg-surface-container-lowest flex items-center justify-between px-space-lg select-none"><div class="flex items-center gap-space-md font-label-sm text-label-sm"><div class="flex items-center gap-1.5 text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>GSQL Autonomous Investigation Daemon:</span><span class="text-tertiary font-semibold">RUNNING</span></div><span class="text-outline-variant">|</span><span class="text-outline">ACTIVE THREADS: 12</span><span class="text-outline-variant">|</span><span class="text-outline">IOPS: 18.2K</span></div><div class="flex items-center gap-space-md font-label-sm text-label-sm"><span class="text-on-surface-variant">AUDIT SEC:</span><span class="text-primary">SOC2 Type II / PCI-DSS L1 Compliant</span><span class="text-outline-variant">|</span><span class="text-outline">SESSION ID: #SOC-88219-B</span></div></footer></body></html>

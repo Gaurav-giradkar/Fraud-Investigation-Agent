@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error":"#690005","surface-container":"#1c2028","surface-tint":"#7bd0ff","on-tertiary-fixed-variant":"#005236","on-secondary-fixed-variant":"#2f2ebe","on-primary":"#00354a","surface-bright":"#353942","surface-dim":"#0f131c","surface-variant":"#31353e","primary":"#8ed5ff","primary-fixed":"#c4e7ff","inverse-primary":"#00668a","tertiary":"#56e5a9","on-tertiary-container":"#004e34","inverse-on-surface":"#2c3039","surface-container-low":"#181c24","on-primary-fixed":"#001e2c","error":"#ffb4ab","on-primary-fixed-variant":"#004c69","surface-container-highest":"#31353e","inverse-surface":"#dfe2ee","on-error-container":"#ffdad6","tertiary-fixed":"#6ffbbe","on-primary-container":"#004965","secondary-fixed-dim":"#c0c1ff","on-tertiary":"#003824","outline":"#87929a","background":"#0f131c","secondary":"#c0c1ff","error-container":"#93000a","secondary-fixed":"#e1e0ff","tertiary-fixed-dim":"#4edea3","on-surface":"#dfe2ee","on-surface-variant":"#bdc8d1","outline-variant":"#3e484f","on-secondary-container":"#b0b2ff","primary-fixed-dim":"#7bd0ff","surface-container-lowest":"#0a0e16","surface":"#0f131c","on-secondary-fixed":"#07006c","secondary-container":"#3131c0","on-tertiary-fixed":"#002113","on-secondary":"#1000a9","tertiary-container":"#30c88f","primary-container":"#38bdf8","surface-container-high":"#262a33","on-background":"#dfe2ee"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-md":"0.5rem","space-xl":"1rem","space-sm":"0.375rem","space-xs":"0.25rem","space-lg":"0.75rem","gutter":"0.5rem","margin":"0.75rem"},fontFamily:{"body-md":["Inter"],"body-lg":["Inter"],"headline-sm":["Inter"],"label-lg":["JetBrains Mono"],"label-md":["JetBrains Mono"],"body-sm":["Inter"],"label-sm":["JetBrains Mono"],"headline-lg":["Inter"],"headline-md":["Inter"],"code-md":["JetBrains Mono"]},fontSize:{"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"body-lg":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-sm":["14px",{"lineHeight":"18px","fontWeight":"600"}],"label-lg":["13px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"label-md":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"12px","letterSpacing":"0.06em","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["16px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}],"code-md":["12px",{"lineHeight":"16px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-14 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.4)] flex items-center justify-between px-space-lg select-none"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Fraud Investigation Agent Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xdp9l8SuUnfq8mAGR_H_SKkzXyxG7a1yvs2w5_zBWRl2gLc0xNagiIgDpt3AkzFQUmJA5rryL37bJbZpWenWfdfRz0qehJoczB9jd5q4Hue5zeHuzFAjTaS0ZhVNFmfOEe47mBNX-XK6IyTIW5gbCT19Wq6gFmtn9bB4NHmMoEYb63aCTYjyWi1-7Q_gVDJKZCcC15GRXtJ_920uPb5mfH_zEYCakLfcSy8ZLnSNs"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight uppercase leading-none">TIGERGRAPH</span><span class="font-label-sm text-label-sm text-primary tracking-widest leading-none mt-0.5">FRAUD OPS COCKPIT</span></div></div><div class="h-6 w-px bg-surface-container-high"></div><div class="hidden xl:flex items-center gap-space-md font-label-sm text-label-sm bg-surface-container-low px-space-md py-1 rounded"><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span><span class="text-on-surface font-medium">TG CLUSTER: ONLINE</span><span class="text-outline font-normal">(v3.9.2-ent)</span></div><span class="text-outline-variant">|</span><div class="flex items-center gap-1 text-on-surface-variant"><span>LATENCY:</span><span class="text-primary font-medium">4.2ms</span></div><span class="text-outline-variant">|</span><div class="flex items-center gap-1 text-on-surface-variant"><span>NODES:</span><span class="text-on-surface font-medium">14.2M</span></div><span class="text-outline-variant">|</span><div class="flex items-center gap-1 text-on-surface-variant"><span>EDGES:</span><span class="text-on-surface font-medium">88.6M</span></div></div></div><div class="flex items-center gap-space-md flex-1 max-w-xl mx-space-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full bg-surface-container-low text-on-surface placeholder:text-outline font-label-md text-label-md pl-9 pr-14 py-1.5 rounded outline-none focus:bg-surface-container" placeholder="Query Case ID, Entity, Card, or Txn Hash..." type="text"/><kbd class="absolute right-2 top-1/2 -translate-y-1/2 bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-1.5 py-0.5 rounded shadow-sm">⌘K</kbd></div><div class="hidden lg:flex items-center gap-1.5 bg-surface-container-low px-space-md py-1 rounded whitespace-nowrap"><span class="w-2 h-2 rounded-full bg-error animate-ping"></span><span class="font-label-sm text-label-sm text-on-surface-variant">CASE:</span><span class="font-label-sm text-label-sm text-error font-medium">HHG-014</span><span class="font-label-sm text-label-sm text-on-surface-variant">(92/100 · CRITICAL)</span><span class="material-symbols-outlined text-outline text-[16px]">expand_more</span></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><button class="relative p-1.5 rounded bg-surface-container-low hover:bg-surface-container-high transition-colors text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[20px]">notifications_active</span><span class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-error text-on-error font-label-sm text-[9px] font-bold">3</span></button><button class="p-1.5 rounded bg-surface-container-low hover:bg-surface-container-high transition-colors text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[20px]">terminal</span></button></div><div class="h-6 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwEbji1-sugWItTnLLpVZ-8Un5QHHlwqgf-6HmmoInRgrYK7t7SBbOZULEq7AhFG2MMvNQ0j5bJMw3V4avBVMQ1PkcA2KEk4ghV_j0ilVryXY5wvxFEzfB0jJ6uQeFOESOdfA0SayB7b3Z7WoB7i7gcOvvCq8BpXDbBbawh_4bTmqDrSI_2n0DI-9BhZ0U4jtHd21iGstbQOlRkGx1_2fKiuQncfrJXPfCnIGbGQ"/><span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-tertiary ring-2 ring-surface-container-lowest"></span></div><div class="hidden md:flex flex-col text-left"><span class="font-label-sm text-label-sm text-on-surface font-semibold leading-tight">S. Vance</span><span class="font-label-sm text-label-sm text-tertiary text-[9px] leading-tight">L3 LEAD · ACTIVE SHIFT</span></div></div></div></header><aside class="fixed left-0 top-14 bottom-8 w-64 bg-surface-container-lowest z-40 flex flex-col justify-between py-space-md select-none"><div class="flex flex-col gap-space-sm px-space-xs"><div class="px-space-md py-1 font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center justify-between"><span>Mission Directives</span><span class="font-code-md text-code-md text-primary font-bold">GSQL v3</span></div><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-high text-primary font-bold border-l-2 border-primary-container"><a class="flex items-center gap-space-md px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">space_dashboard</span><span class="font-body-sm text-body-sm">DASHBOARD</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-2 rounded transition-colors bg-surface-container-high text-primary font-bold border-l-2 border-primary-container" data-path="cases" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">list_alt</span><span class="font-body-sm text-body-sm">CASE EXPLORER</span></div><span class="font-label-sm text-label-sm bg-surface-container-high px-1.5 py-0.5 rounded text-on-surface-variant">20</span></a><a class="flex items-center gap-space-md px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="workspace" href="#"><span class="material-symbols-outlined text-[18px]">biotech</span><span class="font-body-sm text-body-sm">INVESTIGATION WORKSPACE</span></a><a class="flex items-center gap-space-md px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="evidence" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span class="font-body-sm text-body-sm">EVIDENCE VIEW</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="graph" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">hub</span><span class="font-body-sm text-body-sm">GRAPH VIEW</span></div><span class="font-label-sm text-label-sm text-tertiary bg-surface-container-high px-1 py-0.5 rounded">LIVE</span></a><a class="flex items-center gap-space-md px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="agent-activity" href="#"><span class="material-symbols-outlined text-[18px]">smart_toy</span><span class="font-body-sm text-body-sm">AGENT ACTIVITY</span></a><a class="flex items-center justify-between px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="evidence-request" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">dynamic_form</span><span class="font-body-sm text-body-sm">EVIDENCE REQUEST</span></div><span class="font-label-sm text-label-sm text-error bg-error-container/40 px-1 py-0.5 rounded">1 PENDING</span></a><a class="flex items-center gap-space-md px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="next-best-action" href="#"><span class="material-symbols-outlined text-[18px]">crisis_alert</span><span class="font-body-sm text-body-sm">NEXT BEST ACTION</span></a><a class="flex items-center gap-space-md px-space-md py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded transition-colors" data-path="history" href="#"><span class="material-symbols-outlined text-[18px]">history_toggle_off</span><span class="font-body-sm text-body-sm">CASE HISTORY</span></a></nav></div><div class="px-space-md"><div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1"><div class="flex items-center justify-between font-label-sm text-label-sm"><span class="text-outline">AGENT ENGINE</span><span class="text-tertiary">AUTONOMOUS</span></div><div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden"><div class="bg-tertiary h-full w-4/5 animate-pulse"></div></div><div class="flex items-center justify-between font-label-sm text-[9px] text-on-surface-variant"><span class="text-on-surface-variant">CPU: 18.4%</span><span class="text-on-surface-variant">MEM: 41.2GB</span></div></div></div></aside><div class="pl-64"><main class="relative w-full pt-14 pb-8 min-h-screen bg-surface"><div class="flex flex-col w-full text-on-surface">
+<!-- Top Command & Telemetry Ribbon -->
+<div class="px-space-md pt-space-md pb-space-sm bg-surface-container-lowest">
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5 px-2 py-1 bg-surface-container-high rounded text-primary">
+<span class="material-symbols-outlined text-[16px]">dynamic_feed</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">LIVE STREAM : GRAPH_CASE_INDEX</span>
+</div>
+<div class="hidden md:flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex h-1.5 w-1.5 rounded-full bg-tertiary"></span>
+<span>CLUSTER: <strong class="text-tertiary font-code-md">SHARD_US_EAST_09</strong></span>
+<span class="text-outline-variant">|</span>
+<span>TOPOLOGY: <span class="text-on-surface">FIN_GRAPH_ENT_v4</span></span>
+<span class="text-outline-variant">|</span>
+<span>CYCLE LATENCY: <span class="text-primary font-code-md">3.8ms</span></span>
+</div>
+</div>
+<!-- Quick View Toggle & Refresh Group -->
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center bg-surface-container-low p-0.5 rounded" id="viewModeToggle">
+<button class="flex items-center gap-1 px-2 py-1 rounded bg-surface-container text-primary font-label-sm text-label-sm transition-colors" id="btnDenseView" title="Ultra-dense Case Ledger" type="button">
+<span class="material-symbols-outlined text-[14px]">table_rows</span>
+<span>DENSE LEDGER</span>
+</button>
+<button class="flex items-center gap-1 px-2 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" id="btnSplitView" title="Ledger + Inspector Canvas" type="button">
+<span class="material-symbols-outlined text-[14px]">vertical_split</span>
+<span>INSPECTOR SPLIT</span>
+</button>
+</div>
+<button class="flex items-center gap-1 bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-sm text-label-sm px-2.5 py-1.5 rounded transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-tertiary">sync</span>
+<span>STREAM RE-SYNC</span>
+</button>
+</div>
+</div>
+<!-- Search & Filter Console Bar -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-xs items-center bg-surface-container-low p-space-xs rounded">
+<!-- Search Input -->
+<div class="xl:col-span-5 relative">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[16px]">filter_alt</span>
+<input class="w-full bg-surface-container text-on-surface placeholder:text-outline font-label-sm text-label-sm pl-8 pr-16 py-1.5 rounded outline-none focus:bg-surface-container-highest" id="mainCaseSearch" placeholder="Search by Case ID (e.g. HHG-014), Customer ID (CUST-8831), Card ID (CARD-904), Transaction ID (TX-49219)..." type="text"/>
+<span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-sm text-[9px] text-outline bg-surface-container-high px-1 rounded">ESC CLEAR</span>
+</div>
+<!-- Filters -->
+<div class="xl:col-span-7 flex flex-wrap items-center gap-1.5">
+<!-- Status Filter -->
+<div class="flex items-center bg-surface-container px-2 py-1 rounded gap-1 flex-1 min-w-[130px]">
+<span class="font-label-sm text-[10px] text-outline uppercase">Status:</span>
+<select class="bg-transparent text-on-surface font-label-sm text-label-sm outline-none cursor-pointer w-full" id="filterStatus">
+<option class="bg-surface-container text-on-surface" value="ALL">ALL</option>
+<option class="bg-surface-container text-on-surface" value="OPEN">OPEN</option>
+<option class="bg-surface-container text-on-surface" value="ANALYST_REVIEW">ANALYST REVIEW</option>
+<option class="bg-surface-container text-on-surface" value="EVIDENCE_PENDING">EVIDENCE PENDING</option>
+<option class="bg-surface-container text-on-surface" value="AUTO_HOLD">AUTO HOLD</option>
+<option class="bg-surface-container text-on-surface" value="ESCALATED">ESCALATED</option>
+<option class="bg-surface-container text-on-surface" value="CLOSED">CLOSED</option>
+</select>
+</div>
+<!-- Risk Score Filter -->
+<div class="flex items-center bg-surface-container px-2 py-1 rounded gap-1 flex-1 min-w-[140px]">
+<span class="font-label-sm text-[10px] text-outline uppercase">Risk:</span>
+<select class="bg-transparent text-on-surface font-label-sm text-label-sm outline-none cursor-pointer w-full" id="filterRisk">
+<option class="bg-surface-container text-on-surface" value="ALL">ALL SCORES</option>
+<option class="bg-surface-container text-error" value="CRITICAL">CRITICAL &gt;85</option>
+<option class="bg-surface-container text-on-surface-variant" value="HIGH">HIGH 70-84</option>
+<option class="bg-surface-container text-on-surface-variant" value="MEDIUM">MEDIUM 40-69</option>
+<option class="bg-surface-container text-tertiary" value="LOW">LOW &lt;40</option>
+</select>
+</div>
+<!-- Trigger Type Filter -->
+<div class="flex items-center bg-surface-container px-2 py-1 rounded gap-1 flex-1 min-w-[140px]">
+<span class="font-label-sm text-[10px] text-outline uppercase">Trigger:</span>
+<select class="bg-transparent text-on-surface font-label-sm text-label-sm outline-none cursor-pointer w-full" id="filterTrigger">
+<option class="bg-surface-container text-on-surface" value="ALL">ALL PATTERNS</option>
+<option class="bg-surface-container text-on-surface" value="Velocity">Velocity</option>
+<option class="bg-surface-container text-on-surface" value="SIM Swap">SIM Swap</option>
+<option class="bg-surface-container text-on-surface" value="ATO">ATO / Token</option>
+<option class="bg-surface-container text-on-surface" value="Device Spoof">Device Spoof</option>
+<option class="bg-surface-container text-on-surface" value="Geo-Mismatch">Geo-Mismatch</option>
+<option class="bg-surface-container text-on-surface" value="Synthetic ID">Synthetic ID</option>
+<option class="bg-surface-container text-on-surface" value="Mule Ring">Mule Ring</option>
+<option class="bg-surface-container text-on-surface" value="Bust-out">Bust-out</option>
+</select>
+</div>
+<!-- Time Range -->
+<div class="flex items-center bg-surface-container px-2 py-1 rounded gap-1">
+<span class="material-symbols-outlined text-[14px] text-outline">schedule</span>
+<select class="bg-transparent text-on-surface font-label-sm text-label-sm outline-none cursor-pointer" id="filterTime">
+<option class="bg-surface-container text-on-surface" value="24H">24 Hours</option>
+<option class="bg-surface-container text-on-surface" value="7D">7 Days</option>
+<option class="bg-surface-container text-on-surface" value="30D">30 Days</option>
+</select>
+</div>
+<!-- Reset Button -->
+<button class="p-1 text-outline hover:text-on-surface bg-surface-container hover:bg-surface-container-high rounded" id="btnResetFilters" title="Reset Filters" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- Bulk Action Alert Ribbon (Dynamic) -->
+<div class="mt-space-xs flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-high px-space-md py-1.5 rounded transition-all" id="bulkActionBar">
+<div class="flex items-center gap-space-md">
+<span class="font-label-sm text-label-sm text-primary font-bold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span id="bulkSelectionCount">3 cases selected</span>
+</span>
+<span class="text-outline-variant font-code-md">|</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Batch Policy Rule: <span class="text-on-surface">AUTO_EXECUTE_SAFE_TIER</span></span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-1 bg-error-container hover:bg-error-container/80 text-on-error-container font-label-sm text-label-sm px-2.5 py-1 rounded transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>Escalate to Analyst</span>
+</button>
+<button class="flex items-center gap-1 bg-surface-container-highest hover:bg-surface-bright text-on-surface font-label-sm text-label-sm px-2.5 py-1 rounded transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">shield_with_heart</span>
+<span>Batch Step-up</span>
+</button>
+<button class="flex items-center gap-1 bg-surface-container-lowest hover:bg-surface-container text-primary font-label-sm text-label-sm px-2.5 py-1 rounded transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">terminal</span>
+<span>Export GSQL Audit</span>
+</button>
+<button class="text-outline hover:text-on-surface font-label-sm text-[10px] uppercase px-1.5 py-1" id="btnClearSelection" type="button">
+          Deselect
+        </button>
+</div>
+</div>
+</div>
+<!-- Primary Workspace Content (Grid / Split Mode) -->
+<div class="flex flex-1 w-full overflow-hidden p-space-md gap-space-md">
+<!-- Main Case Ledger Panel -->
+<div class="flex-1 flex flex-col min-w-0 bg-surface-container-lowest rounded shadow-md overflow-hidden" id="caseTableContainer">
+<!-- Table Header & Metric Snapshot -->
+<div class="flex items-center justify-between px-space-md py-1.5 bg-surface-container-low">
+<div class="flex items-center gap-space-md">
+<span class="font-label-sm text-label-sm font-bold text-on-surface tracking-wider">CASE LEDGER</span>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span>SHOWING:</span>
+<span class="text-primary font-bold" id="renderedRowsCount">20</span>
+<span class="text-outline">/ 20 LOADED</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-[10px]">
+<span class="text-outline">GSQL INDEX:</span>
+<span class="text-tertiary">HASH_PARTITIONED (x8)</span>
+<span class="text-outline-variant">|</span>
+<span class="text-outline">PAGE SIZE:</span>
+<span class="text-on-surface">20 ROW STRICT</span>
+</div>
+</div>
+<!-- Data Table Scroll Box -->
+<div class="overflow-x-auto overflow-y-auto max-h-[calc(100vh-290px)] min-h-[500px]">
+<table class="w-full text-left table-fixed border-collapse select-text">
+<thead class="bg-surface-container-low sticky top-0 z-20">
+<tr class="h-7 text-outline font-label-sm text-label-sm uppercase">
+<th class="w-8 px-2 text-center">
+<input checked="" class="accent-primary rounded cursor-pointer h-3.5 w-3.5" id="selectAllCheckbox" type="checkbox"/>
+</th>
+<th class="w-24 px-2 tracking-wider">Case ID</th>
+<th class="w-64 px-2 tracking-wider">Trigger Pattern</th>
+<th class="w-48 px-2 tracking-wider">Customer Entity</th>
+<th class="w-36 px-2 tracking-wider">Card Artifact</th>
+<th class="w-52 px-2 tracking-wider">Flagged Transaction</th>
+<th class="w-24 px-2 text-center tracking-wider">Risk Score</th>
+<th class="w-36 px-2 tracking-wider">Status</th>
+<th class="w-24 px-2 tracking-wider">Opened</th>
+<th class="w-32 px-2 text-right tracking-wider pr-3">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface divide-y divide-transparent" id="caseGridBody">
+<!-- Row 1: HHG-014 -->
+<tr class="h-8 bg-surface-container-low/40 hover:bg-surface-container transition-colors group cursor-pointer" data-case="HHG-014" data-risk="92" data-status="ANALYST_REVIEW" data-trigger="Device Spoof &amp; Crypto Velocity">
+<td class="px-2 text-center"><input checked="" class="case-select accent-primary rounded cursor-pointer h-3.5 w-3.5" type="checkbox"/></td>
+<td class="px-2 font-code-md text-code-md text-error font-semibold">HHG-014</td>
+<td class="px-2 truncate text-on-surface font-medium" title="Device Spoof &amp; Crypto Velocity">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-error">phonelink_erase</span>
+<span class="truncate">Device Spoof &amp; Crypto Velocity</span>
+</div>
+</td>
+<td class="px-2 truncate">
+<div class="flex flex-col leading-tight">
+<span class="font-code-md text-code-md text-primary">CUST-8831</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">E. Sterling (Tier-1)</span>
+</div>
+</td>
+<td class="px-2 font-code-md text-code-md text-on-surface-variant">VISA •••• 4912</td>
+<td class="px-2">
+<div class="flex items-center justify-between font-code-md text-code-md">
+<span class="text-on-surface font-semibold">$4,850.00</span>
+<span class="font-label-sm text-[10px] text-outline truncate max-w-[90px]">CoinBridge</span>
+</div>
+</td>
+<td class="px-2 text-center">
+<span class="inline-block px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">92 CRIT</span>
+</td>
+<td class="px-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-error-container/30 text-error">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+                  ANALYST_REVIEW
+                </span>
+</td>
+<td class="px-2 font-code-md text-[11px] text-on-surface-variant">6m ago</td>
+<td class="px-2 text-right pr-3">
+<button class="px-2 py-0.5 bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-[10px] rounded transition-colors inline-flex items-center gap-1" type="button">
+<span>WORKSPACE</span>
+<span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: HHG-018 -->
+<tr class="h-8 bg-surface-container-lowest hover:bg-surface-container transition-colors group cursor-pointer" data-case="HHG-018" data-risk="88" data-status="STEP_UP_FAILED" data-trigger="SIM Swap &amp; Large Wire Outflow">
+<td class="px-2 text-center"><input checked="" class="case-select accent-primary rounded cursor-pointer h-3.5 w-3.5" type="checkbox"/></td>
+<td class="px-2 font-code-md text-code-md text-error font-semibold">HHG-018</td>
+<td class="px-2 truncate text-on-surface font-medium" title="SIM Swap &amp; Large Wire Outflow">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-error">sim_card_alert</span>
+<span class="truncate">SIM Swap &amp; Large Wire Outflow</span>
+</div>
+</td>
+<td class="px-2 truncate">
+<div class="flex flex-col leading-tight">
+<span class="font-code-md text-code-md text-primary">CUST-9014</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">M. Chen (PB)</span>
+</div>
+</td>
+<td class="px-2 font-code-md text-code-md text-on-surface-variant">MC •••• 1083</td>
+<td class="px-2">
+<div class="flex items-center justify-between font-code-md text-code-md">
+<span class="text-on-surface font-semibold">$9,200.00</span>
+<span class="font-label-sm text-[10px] text-outline truncate max-w-[90px]">GlobalWire</span>
+</div>
+</td>
+<td class="px-2 text-center">
+<span class="inline-block px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">88 CRIT</span>
+</td>
+<td class="px-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-error-container/30 text-error">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  STEP_UP_FAILED
+                </span>
+</td>
+<td class="px-2 font-code-md text-[11px] text-on-surface-variant">14m ago</td>
+<td class="px-2 text-right pr-3">
+<button class="px-2 py-0.5 bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-[10px] rounded transition-colors inline-flex items-center gap-1" type="button">
+<span>WORKSPACE</span>
+<span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: HHG-007 -->
+<tr class="h-8 bg-surface-container-low/40 hover:bg-surface-container transition-colors group cursor-pointer" data-case="HHG-007" data-risk="81" data-status="EVIDENCE_PENDING" data-trigger="Synthetic ID Ring Pattern">
+<td class="px-2 text-center"><input checked="" class="case-select accent-primary rounded cursor-pointer h-3.5 w-3.5" type="checkbox"/></td>
+<td class="px-2 font-code-md text-code-md text-primary font-semibold">HHG-007</td>
+<td class="px-2 truncate text-on-surface font-medium" title="Synthetic ID Ring Pattern">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">fingerprint</span>
+<span class="truncate">Synthetic ID Ring Pattern</span>
+</div>
+</td>
+<td class="px-2 truncate">
+<div class="flex flex-col leading-tight">
+<span class="font-code-md text-code-md text-primary">CUST-4419</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">A. Novak (Synthetic)</span>
+</div>
+</td>
+<td class="px-2 font-code-md text-code-md text-on-surface-variant">AMEX •••• 7721</td>
+<td class="px-2">
+<div class="flex items-center justify-between font-code-md text-code-md">
+<span class="text-on-surface font-semibold">$1,240.00</span>
+<span class="font-label-sm text-[10px] text-outline truncate max-w-[90px]">Lumina Lux</span>
+</div>
+</td>
+<td class="px-2 text-center">
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold">81 HIGH</span>
+</td>
+<td class="px-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  EVIDENCE_PENDING
+                </span>
+</td>
+<td class="px-2 font-code-md text-[11px] text-on-surface-variant">28m ago</td>
+<td class="px-2 text-right pr-3">
+<button class="px-2 py-0.5 bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-[10px] rounded transition-colors inline-flex items-center gap-1" type="button">
+<span>WORKSPACE</span>
+<span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: HHG-011 -->
+<tr class="h-8 bg-surface-container-lowest hover:bg-surface-container transition-colors group cursor-pointer" data-case="HHG-011" data-risk="76" data-status="AUTO_HOLD" data-trigger="ATO">
+<td class="px-2 text-center"><input class="case-select accent-primary rounded cursor-pointer h-3.5 w-3.5" type="checkbox"/></td>
+<td class="px-2 font-code-md text-code-md text-on-surface font-semibold">HHG-011</td>
+<td class="px-2 truncate text-on-surface font-medium" title="Account Takeover / Token Drain">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary-fixed-dim">vpn_key_alert</span>
+<span class="truncate">Account Takeover / Token Drain</span>
+</div>
+</td>
+<td class="px-2 truncate">
+<div class="flex flex-col leading-tight">
+<span class="font-code-md text-code-md text-primary">CUST-6502</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">R. Miller</span>
+</div>
+</td>
+<td class="px-2 font-code-md text-code-md text-on-surface-variant">VISA •••• 3349</td>
+<td class="px-2">
+<div class="flex items-center justify-between font-code-md text-code-md">
+<span class="text-on-surface font-semibold">$3,150.00</span>
+<span class="font-label-sm text-[10px] text-outline truncate max-w-[90px]">DigiGift Card</span>
+</div>
+</td>
+<td class="px-2 text-center">
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold">76 HIGH</span>
+</td>
+<td class="px-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-secondary-container/30 text-secondary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed"></span>
+                  AUTO_HOLD
+                </span>
+</td>
+<td class="px-2 font-code-md text-[11px] text-on-surface-variant">42m ago</td>
+<td class="px-2 text-right pr-3">
+<button class="px-2 py-0.5 bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-[10px] rounded transition-colors inline-flex items-center gap-1" type="button">
+<span>WORKSPACE</span>
+<span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: HHG-001 -->
+<tr class="h-8 bg-surface-container-low/40 hover:bg-surface-container transition-colors group cursor-pointer" data-case="HHG-001" data-risk="74" data-status="ESCALATED" data-trigger="Velocity">
+<td class="px-2 text-center"><input class="case-select accent-primary rounded cursor-pointer h-3.5 w-3.5" type="checkbox"/></td>
+<td class="px-2 font-code-md text-code-md text-on-surface font-semibold">HHG-001</td>
+<td class="px-2 truncate text-on-surface font-medium" title="Impossible Velocity / Dual Geo">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">speed</span>
+<span class="truncate">Impossible Velocity / Dual Geo</span>
+</div>
+</td>
+<td class="px-2 truncate">
+<div class="flex flex-col leading-tight">
+<span class="font-code-md text-code-md text-primary">CUST-1044</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">K. Patel</span>
+</div>
+</td>
+<td class="px-2 font-code-md text-code-md text-on-surface-variant">VISA •••• 8820</td>
+<td class="px-2">
+<div class="flex items-center justify-between font-code-md text-code-md">
+<span class="text-on-surface font-semibold">$850.00</span>
+<span class="font-label-sm text-[10px] text-outline truncate max-w-[90px]">TechDepot EU</span>
+</div>
+</td>
+<td class="px-2 text-center">
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold">74 HIGH</span>
+</td>
+<td class="px-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-error-container/20 text-error">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  ESCALATED
+                </span>
+</td>
+<td class="px-2 font-code-md text-[11px] text-on-surface-variant">55m ago</td>
+<td class="px-2 text-right pr-3">
+<button class="px-2 py-0.5 bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-[10px] rounded transition-colors inline-flex items-center gap-1" type="button">
+<span>WORKSPACE</span>
+<span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 6: HHG-003 -->
+<tr class="h-8 bg-surface-container-lowest hover:bg-surface-container transition-colors group cursor-pointer" data-case="HHG-003" data-risk="68" data-status="ANALYST_REVIEW" data-trigger="Bust-out">
+<td class="px-2 text-center"><input class="case-select accent-primary rounded cursor-pointer h-3.5 w-3.5" type="checkbox"/></td>
+<td class="px-2 font-code-md text-code-md text-on-surface font-semibold">HHG-003</td>
+<td class="px-2 truncate text-on-surface font-medium" title="First Party Bust-Out">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">credit_score</span>
+<span class="truncate">First Party Bust-Out</span>
+</div>
+</td>
+<td class="px-2 truncate">
+<div class="flex flex-col leading-tight">
+<span class="font-code-md text-code-md text-primary">CUST-1288</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">T. Alvarez</span>
+</div>
+</td>
+<td class="px-2 font-code-md text-code-md text-on-surface-variant">MC •••• 9920</td>
+<td class="px-2">
+<div class="flex items-center justify-between font-code-md text-code-md">
+<span class="text-on-surface font-semibold">$6,400.00</span>
+<span class="font-label-sm text-[10px] text-outline truncate max-w-[90px]">Apex Jewelers</span>
+</div>
+</td>
+<td class="px-2 text-center">
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-bold">68 MED</span>
+</td>
+<td class="px-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  VERIFY_CUSTOMER
+                </span>
+</td>
+<td class="px-2 font-code-md text-[11px] text-on-surface-variant">1h ago</td>
+<td class="px-2 text-right pr-3">
+<button class="px-2 py-0.5 bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-[10px] rounded transition-colors inline-flex items-center gap-1" type="button">
+<span>WORKSPACE</span>
+<span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 7: HHG-005 -->
+<tr class="h-8 bg-surface-container-low/40 hover:bg-surface-container transition-colors group cursor-pointer" data-case="HHG-005" data-risk="85" data-status="ANALYST_REVIEW" data-trigger="Synthetic ID">
+<td class="px-2 text-center"><input class="case-select accent-primary rounded cursor-pointer h-3.5 w-3.5" type="checkbox"/></td>
+<td class="px-2 font-code-md text-code-md text-error font-semibold">HHG-005</td>
+<td class="px-2 truncate text-on-surface font-medium" title="Shared Fingerprint Across 5 SSNs">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-error">hub</span>
+<span class="truncate">Shared Fingerprint Across 5 SSNs</span>
+</div>
+</td>
+<td class="px-2 truncate">
+<div class="flex flex-col leading-tight">
+<span class="font-code-md text-code-md text-primary">CUST-3901</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">D. Kim</span>
+</div>
+</td>
+<td class="px-2 font-code-md text-code-md text-on-surface-variant">VISA •••• 1142</td>
+<td class="px-2">
+<div class="flex items-center justify-between font-code-md text-code-md">
+<span class="text-on-surface font-semibold">$1,980.00</span>
+<span class="font-label-sm text-[10px] text-outline truncate max-w-[90px]">BestElectronics</span>
+</div>
+</td>
+<td class="px-2 text-center">
+<span class="inline-block px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">85 CRIT</span>
+</td>
+<td class="px-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-error-container/30 text-error">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  ANALYST_REVIEW
+                </span>
+</td>
+<td class="px-2 font-code-md text-[11px] text-on-surface-variant">1h 12m</td>
+<td class="px-2 text-right pr-3">
+<button class="px-2 py-0.5 bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-[10px] rounded transition-colors inline-flex items-center gap-1" type="button">
+<span>WORKSPACE</span>
+<span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 8: HHG-009 -->
+<tr class="h-8 bg-surface-container-lowest hover:bg-surface-container transition-colors group cursor-pointer" data-case="HHG-009" data-risk="94" data-status="CLOSED" data-trigger="Mule Ring">
+<td class="px-2 text-center"><input class="case-select accent-primary rounded cursor-pointer h-3.5 w-3.5" type="checkbox"/></td>
+<td class="px-2 font-code-md text-code-md text-error font-semibold">HHG-009</td>
+<td class="px-2 truncate text-on-surface font-medium" title="Known Mule Account Graph Proximity">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-error">device_hub</span>
+<span class="truncate">Known Mule Account Graph Proximity</span>
+</div>
+</td>
+<td class="px-2 truncate">
+<div class="flex flex-col leading-tight">
+<span class="font-code-md text-code-md text-primary">CUST-5120</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">S. Johansson</span>
+</div>
+</td>
+<td class="px-2 font-code-md text-code-md text-on-surface-variant">MC •••• 6610</td>
+<td class="px-2">
+<div class="flex items-center justify-between font-code-md text-code-md">
+<span class="text-on-surface font-semibold">$4,100.00</span>
+<span class="font-label-sm text-[10px] text-outline truncate max-w-[90px]">P2P Transfer</span>
+</div>
+</td>
+<td class="px-2 text-center">
+<span class="inline-block px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">94 CRIT</span>
+</td>
+<td class="px-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-surface-container-highest text-error">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  BLOCKED
+                </span>
+</td>
+<td class="px-2 font-code-md text-[11px] text-on-surface-variant">1h 30m</td>
+<td class="px-2 text-right pr-3">
+<button class="px-2 py-0.5 bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-[10px] rounded transition-colors inline-flex items-center gap-1" type="button">
+<span>WORKSPACE</span>
+<span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 9: HHG-002 -->
+<tr class="h-8 bg-surface-container-low/40 hover:bg-surface-container transition-colors group cursor-pointer" data-case="HHG-002" data-risk="42" data-status="OPEN" data-trigger="Velocity">
+<td class="px-2 text-center"><input class="case-select accent-primary rounded cursor-pointer h-3.5 w-3.5" type="checkbox"/></td>
+<td class="px-2 font-code-md text-code-md text-on-surface font-semibold">HHG-002</td>
+<td class="px-2 truncate text-on-surface font-medium" title="Micro-Deposit Verification Anomaly">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-outline">verified</span>
+<span class="truncate">Micro-Deposit Verification Anomaly</span>
+</div>
+</td>
+<td class="px-2 truncate">
+<div class="flex flex-col leading-tight">
+<span class="font-code-md text-code-md text-primary">CUST-2210</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">J. Doe</span>
+</div>
+</td>
+<td class="px-2 font-code-md text-code-md text-on-surface-variant">VISA •••• 5531</td>
+<td class="px-2">
+<div class="flex items-center justify-between font-code-md text-code-md">
+<span class="text-on-surface font-semibold">$14.20</span>
+<span class="font-label-sm text-[10px] text-outline truncate max-w-[90px]">AuthCheck LLC</span>
+</div>
+</td>
+<td class="px-2 text-center">
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-bold">42 MED</span>
+</td>
+<td class="px-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  MONITORING
+                </span>
+</td>
+<td class="px-2 font-code-md text-[11px] text-on-surface-variant">2h ago</td>
+<td class="px-2 text-right pr-3">
+<button class="px-2 py-0.5 bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-[10px] rounded transition-colors inline-flex items-center gap-1" type="button">
+<span>WORKSPACE</span>
+<span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 10: HHG-004 -->
+<tr class="h-8 bg-surface-container-lowest hover:bg-surface-container transition-colors group cursor-pointer" data-case="HHG-004" data-risk="61" data-status="ANALYST_REVIEW" data-trigger="Velocity">
+<td class="px-2 text-center"><input class="case-select accent-primary rounded cursor-pointer h-3.5 w-3.5" type="checkbox"/></td>
+<td class="px-2 font-code-md text-code-md text-on-surface font-semibold">HHG-004</td>
+<td class="px-2 truncate text-on-surface font-medium" title="Unusual Merchant Category Surge">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">storefront</span>
+<span class="truncate">Unusual Merchant Category Surge</span>
+</div>
+</td>
+<td class="px-2 truncate">
+<div class="flex flex-col leading-tight">
+<span class="font-code-md text-code-md text-primary">CUST-3044</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">L. Gomez</span>
+</div>
+</td>
+<td class="px-2 font-code-md text-code-md text-on-surface-variant">MC •••• 4402</td>
+<td class="px-2">
+<div class="flex items-center justify-between font-code-md text-code-md">
+<span class="text-on-surface font-semibold">$2,490.00</span>
+<span class="font-label-sm text-[10px] text-outline truncate max-w-[90px]">GamingPortal</span>
+</div>
+</td>
+<td class="px-2 text-center">
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-bold">61 MED</span>
+</td>
+<td class="px-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  IN_REVIEW
+                </span>
+</td>
+<td class="px-2 font-code-md text-[11px] text-on-surface-variant">2h 20m</td>
+<td class="px-2 text-right pr-3">
+<button class="px-2 py-0.5 bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-[10px] rounded transition-colors inline-flex items-center gap-1" type="button">
+<span>WORKSPACE</span>
+<span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 11: HHG-006 -->
+<tr class="h-8 bg-surface-container-low/40 hover:bg-surface-container transition-colors group cursor-pointer" data-case="HHG-006" data-risk="58" data-status="EVIDENCE_PENDING" data-trigger="Device Spoof">
+<td class="px-2 text-center"><input class="case-select accent-primary rounded cursor-pointer h-3.5 w-3.5" type="checkbox"/></td>
+<td class="px-2 font-code-md text-code-md text-on-surface font-semibold">HHG-006</td>
+<td class="px-2 truncate text-on-surface font-medium" title="New Device + Billing Zip Mismatch">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-outline">phonelink_lock</span>
+<span class="truncate">New Device + Billing Zip Mismatch</span>
+</div>
+</td>
+<td class="px-2 truncate">
+<div class="flex flex-col leading-tight">
+<span class="font-code-md text-code-md text-primary">CUST-4890</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">H. Becker</span>
+</div>
+</td>
+<td class="px-2 font-code-md text-code-md text-on-surface-variant">AMEX •••• 2219</td>
+<td class="px-2">
+<div class="flex items-center justify-between font-code-md text-code-md">
+<span class="text-on-surface font-semibold">$730.00</span>
+<span class="font-label-sm text-[10px] text-outline truncate max-w-[90px]">CloudHosting</span>
+</div>
+</td>
+<td class="px-2 text-center">
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-bold">58 MED</span>
+</td>
+<td class="px-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  PENDING_DOCS
+                </span>
+</td>
+<td class="px-2 font-code-md text-[11px] text-on-surface-variant">2h 45m</td>
+<td class="px-2 text-right pr-3">
+<button class="px-2 py-0.5 bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-[10px] rounded transition-colors inline-flex items-center gap-1" type="button">
+<span>WORKSPACE</span>
+<span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 12: HHG-008 -->
+<tr class="h-8 bg-surface-container-lowest hover:bg-surface-container transition-colors group cursor-pointer" data-case="HHG-008" data-risk="79" data-status="OPEN" data-trigger="ATO">
+<td class="px-2 text-center"><input class="case-select accent-primary rounded cursor-pointer h-3.5 w-3.5" type="checkbox"/></td>
+<td class="px-2 font-code-md text-code-md text-primary font-semibold">HHG-008</td>
+<td class="px-2 truncate text-on-surface font-medium" title="Dormant Account Sudden Reactivation">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">alarm_on</span>
+<span class="truncate">Dormant Account Sudden Reactivation</span>
+</div>
+</td>
+<td class="px-2 truncate">
+<div class="flex flex-col leading-tight">
+<span class="font-code-md text-code-md text-primary">CUST-5832</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">P. Dubois</span>
+</div>
+</td>
+<td class="px-2 font-code-md text-code-md text-on-surface-variant">VISA •••• 0091</td>
+<td class="px-2">
+<div class="flex items-center justify-between font-code-md text-code-md">
+<span class="text-on-surface font-semibold">$3,800.00</span>
+<span class="font-label-sm text-[10px] text-outline truncate max-w-[90px]">LuxuryWatch</span>
+</div>
+</td>
+<td class="px-2 text-center">
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold">79 HIGH</span>
+</td>
+<td class="px-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  STEP_UP_AUTH
+                </span>
+</td>
+<td class="px-2 font-code-md text-[11px] text-on-surface-variant">3h ago</td>
+<td class="px-2 text-right pr-3">
+<button class="px-2 py-0.5 bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-[10px] rounded transition-colors inline-flex items-center gap-1" type="button">
+<span>WORKSPACE</span>
+<span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 13: HHG-010 -->
+<tr class="h-8 bg-surface-container-low/40 hover:bg-surface-container transition-colors group cursor-pointer" data-case="HHG-010" data-risk="63" data-status="CLOSED" data-trigger="Velocity">
+<td class="px-2 text-center"><input class="case-select accent-primary rounded cursor-pointer h-3.5 w-3.5" type="checkbox"/></td>
+<td class="px-2 font-code-md text-code-md text-on-surface font-semibold">HHG-010</td>
+<td class="px-2 truncate text-on-surface font-medium" title="Repeated CVV Failure Followed by Success">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-outline">password</span>
+<span class="truncate">Repeated CVV Failure Followed by Success</span>
+</div>
+</td>
+<td class="px-2 truncate">
+<div class="flex flex-col leading-tight">
+<span class="font-code-md text-code-md text-primary">CUST-6109</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">V. Sharma</span>
+</div>
+</td>
+<td class="px-2 font-code-md text-code-md text-on-surface-variant">MC •••• 8173</td>
+<td class="px-2">
+<div class="flex items-center justify-between font-code-md text-code-md">
+<span class="text-on-surface font-semibold">$450.00</span>
+<span class="font-label-sm text-[10px] text-outline truncate max-w-[90px]">QuickRetail</span>
+</div>
+</td>
+<td class="px-2 text-center">
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-bold">63 MED</span>
+</td>
+<td class="px-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-tertiary-container/30 text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  RESOLVED_CLEARED
+                </span>
+</td>
+<td class="px-2 font-code-md text-[11px] text-on-surface-variant">3h 15m</td>
+<td class="px-2 text-right pr-3">
+<button class="px-2 py-0.5 bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-[10px] rounded transition-colors inline-flex items-center gap-1" type="button">
+<span>WORKSPACE</span>
+<span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 14: HHG-012 -->
+<tr class="h-8 bg-surface-container-lowest hover:bg-surface-container transition-colors group cursor-pointer" data-case="HHG-012" data-risk="87" data-status="CLOSED" data-trigger="Device Spoof">
+<td class="px-2 text-center"><input class="case-select accent-primary rounded cursor-pointer h-3.5 w-3.5" type="checkbox"/></td>
+<td class="px-2 font-code-md text-code-md text-error font-semibold">HHG-012</td>
+<td class="px-2 truncate text-on-surface font-medium" title="High-Risk BIN + Tor Exit Node">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-error">public_off</span>
+<span class="truncate">High-Risk BIN + Tor Exit Node</span>
+</div>
+</td>
+<td class="px-2 truncate">
+<div class="flex flex-col leading-tight">
+<span class="font-code-md text-code-md text-primary">CUST-7291</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">O. Hansen</span>
+</div>
+</td>
+<td class="px-2 font-code-md text-code-md text-on-surface-variant">VISA •••• 4490</td>
+<td class="px-2">
+<div class="flex items-center justify-between font-code-md text-code-md">
+<span class="text-on-surface font-semibold">$1,850.00</span>
+<span class="font-label-sm text-[10px] text-outline truncate max-w-[90px]">VPN &amp; Digital</span>
+</div>
+</td>
+<td class="px-2 text-center">
+<span class="inline-block px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">87 CRIT</span>
+</td>
+<td class="px-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-error-container/20 text-error">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  DECLINED
+                </span>
+</td>
+<td class="px-2 font-code-md text-[11px] text-on-surface-variant">3h 40m</td>
+<td class="px-2 text-right pr-3">
+<button class="px-2 py-0.5 bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-[10px] rounded transition-colors inline-flex items-center gap-1" type="button">
+<span>WORKSPACE</span>
+<span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 15: HHG-013 -->
+<tr class="h-8 bg-surface-container-low/40 hover:bg-surface-container transition-colors group cursor-pointer" data-case="HHG-013" data-risk="72" data-status="AUTO_HOLD" data-trigger="Velocity">
+<td class="px-2 text-center"><input class="case-select accent-primary rounded cursor-pointer h-3.5 w-3.5" type="checkbox"/></td>
+<td class="px-2 font-code-md text-code-md text-on-surface font-semibold">HHG-013</td>
+<td class="px-2 truncate text-on-surface font-medium" title="Rapid Multi-Merchant Card Testing">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">flash_on</span>
+<span class="truncate">Rapid Multi-Merchant Card Testing</span>
+</div>
+</td>
+<td class="px-2 truncate">
+<div class="flex flex-col leading-tight">
+<span class="font-code-md text-code-md text-primary">CUST-8012</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">M. Rossi</span>
+</div>
+</td>
+<td class="px-2 font-code-md text-code-md text-on-surface-variant">MC •••• 3311</td>
+<td class="px-2">
+<div class="flex items-center justify-between font-code-md text-code-md">
+<span class="text-on-surface font-semibold">$2.50</span>
+<span class="font-label-sm text-[10px] text-outline truncate max-w-[90px]">TestMerchant</span>
+</div>
+</td>
+<td class="px-2 text-center">
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold">72 HIGH</span>
+</td>
+<td class="px-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  CARD_FROZEN
+                </span>
+</td>
+<td class="px-2 font-code-md text-[11px] text-on-surface-variant">4h ago</td>
+<td class="px-2 text-right pr-3">
+<button class="px-2 py-0.5 bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-[10px] rounded transition-colors inline-flex items-center gap-1" type="button">
+<span>WORKSPACE</span>
+<span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 16: HHG-015 -->
+<tr class="h-8 bg-surface-container-lowest hover:bg-surface-container transition-colors group cursor-pointer" data-case="HHG-015" data-risk="83" data-status="ANALYST_REVIEW" data-trigger="ATO">
+<td class="px-2 text-center"><input class="case-select accent-primary rounded cursor-pointer h-3.5 w-3.5" type="checkbox"/></td>
+<td class="px-2 font-code-md text-code-md text-primary font-semibold">HHG-015</td>
+<td class="px-2 truncate text-on-surface font-medium" title="Payroll Diversion Phishing Risk">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">mark_email_unread</span>
+<span class="truncate">Payroll Diversion Phishing Risk</span>
+</div>
+</td>
+<td class="px-2 truncate">
+<div class="flex flex-col leading-tight">
+<span class="font-code-md text-code-md text-primary">CUST-9122</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">E. Davies</span>
+</div>
+</td>
+<td class="px-2 font-code-md text-code-md text-on-surface-variant">VISA •••• 7734</td>
+<td class="px-2">
+<div class="flex items-center justify-between font-code-md text-code-md">
+<span class="text-on-surface font-semibold">$5,000.00</span>
+<span class="font-label-sm text-[10px] text-outline truncate max-w-[90px]">DirectDeposit</span>
+</div>
+</td>
+<td class="px-2 text-center">
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold">83 HIGH</span>
+</td>
+<td class="px-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-error-container/30 text-error">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  ANALYST_REVIEW
+                </span>
+</td>
+<td class="px-2 font-code-md text-[11px] text-on-surface-variant">4h 30m</td>
+<td class="px-2 text-right pr-3">
+<button class="px-2 py-0.5 bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-[10px] rounded transition-colors inline-flex items-center gap-1" type="button">
+<span>WORKSPACE</span>
+<span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 17: HHG-016 -->
+<tr class="h-8 bg-surface-container-low/40 hover:bg-surface-container transition-colors group cursor-pointer" data-case="HHG-016" data-risk="89" data-status="CLOSED" data-trigger="Geo-Mismatch">
+<td class="px-2 text-center"><input class="case-select accent-primary rounded cursor-pointer h-3.5 w-3.5" type="checkbox"/></td>
+<td class="px-2 font-code-md text-code-md text-error font-semibold">HHG-016</td>
+<td class="px-2 truncate text-on-surface font-medium" title="ATM Cash-Out Sequence in Flagged Region">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-error">atm</span>
+<span class="truncate">ATM Cash-Out Sequence in Flagged Region</span>
+</div>
+</td>
+<td class="px-2 truncate">
+<div class="flex flex-col leading-tight">
+<span class="font-code-md text-code-md text-primary">CUST-9304</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">N. Kowalski</span>
+</div>
+</td>
+<td class="px-2 font-code-md text-code-md text-on-surface-variant">DEBIT •••• 1209</td>
+<td class="px-2">
+<div class="flex items-center justify-between font-code-md text-code-md">
+<span class="text-on-surface font-semibold">$1,000.00</span>
+<span class="font-label-sm text-[10px] text-outline truncate max-w-[90px]">ATM Downtown</span>
+</div>
+</td>
+<td class="px-2 text-center">
+<span class="inline-block px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">89 CRIT</span>
+</td>
+<td class="px-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-surface-container-highest text-error">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  BLOCKED
+                </span>
+</td>
+<td class="px-2 font-code-md text-[11px] text-on-surface-variant">5h ago</td>
+<td class="px-2 text-right pr-3">
+<button class="px-2 py-0.5 bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-[10px] rounded transition-colors inline-flex items-center gap-1" type="button">
+<span>WORKSPACE</span>
+<span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 18: HHG-017 -->
+<tr class="h-8 bg-surface-container-lowest hover:bg-surface-container transition-colors group cursor-pointer" data-case="HHG-017" data-risk="71" data-status="ANALYST_REVIEW" data-trigger="Mule Ring">
+<td class="px-2 text-center"><input class="case-select accent-primary rounded cursor-pointer h-3.5 w-3.5" type="checkbox"/></td>
+<td class="px-2 font-code-md text-code-md text-on-surface font-semibold">HHG-017</td>
+<td class="px-2 truncate text-on-surface font-medium" title="P2P Layering Pattern to New Beneficiary">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">account_tree</span>
+<span class="truncate">P2P Layering Pattern to New Beneficiary</span>
+</div>
+</td>
+<td class="px-2 truncate">
+<div class="flex flex-col leading-tight">
+<span class="font-code-md text-code-md text-primary">CUST-9580</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">B. Foster</span>
+</div>
+</td>
+<td class="px-2 font-code-md text-code-md text-on-surface-variant">VISA •••• 9811</td>
+<td class="px-2">
+<div class="flex items-center justify-between font-code-md text-code-md">
+<span class="text-on-surface font-semibold">$2,950.00</span>
+<span class="font-label-sm text-[10px] text-outline truncate max-w-[90px]">QuickPay</span>
+</div>
+</td>
+<td class="px-2 text-center">
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold">71 HIGH</span>
+</td>
+<td class="px-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  IN_REVIEW
+                </span>
+</td>
+<td class="px-2 font-code-md text-[11px] text-on-surface-variant">5h 30m</td>
+<td class="px-2 text-right pr-3">
+<button class="px-2 py-0.5 bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-[10px] rounded transition-colors inline-flex items-center gap-1" type="button">
+<span>WORKSPACE</span>
+<span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 19: HHG-019 -->
+<tr class="h-8 bg-surface-container-low/40 hover:bg-surface-container transition-colors group cursor-pointer" data-case="HHG-019" data-risk="45" data-status="CLOSED" data-trigger="Synthetic ID">
+<td class="px-2 text-center"><input class="case-select accent-primary rounded cursor-pointer h-3.5 w-3.5" type="checkbox"/></td>
+<td class="px-2 font-code-md text-code-md text-outline font-semibold">HHG-019</td>
+<td class="px-2 truncate text-on-surface font-medium" title="Recurring Subscription Fraud Farm">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">autorenew</span>
+<span class="truncate">Recurring Subscription Fraud Farm</span>
+</div>
+</td>
+<td class="px-2 truncate">
+<div class="flex flex-col leading-tight">
+<span class="font-code-md text-code-md text-primary">CUST-9821</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">F. Weber</span>
+</div>
+</td>
+<td class="px-2 font-code-md text-code-md text-on-surface-variant">MC •••• 6543</td>
+<td class="px-2">
+<div class="flex items-center justify-between font-code-md text-code-md">
+<span class="text-on-surface font-semibold">$29.99</span>
+<span class="font-label-sm text-[10px] text-outline truncate max-w-[90px]">MediaStream</span>
+</div>
+</td>
+<td class="px-2 text-center">
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container text-tertiary font-label-sm text-label-sm font-bold">45 MED</span>
+</td>
+<td class="px-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-surface-container text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  CLOSED_NO_FRAUD
+                </span>
+</td>
+<td class="px-2 font-code-md text-[11px] text-on-surface-variant">6h ago</td>
+<td class="px-2 text-right pr-3">
+<button class="px-2 py-0.5 bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-[10px] rounded transition-colors inline-flex items-center gap-1" type="button">
+<span>WORKSPACE</span>
+<span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 20: HHG-020 -->
+<tr class="h-8 bg-surface-container-lowest hover:bg-surface-container transition-colors group cursor-pointer" data-case="HHG-020" data-risk="78" data-status="ESCALATED" data-trigger="Bust-out">
+<td class="px-2 text-center"><input class="case-select accent-primary rounded cursor-pointer h-3.5 w-3.5" type="checkbox"/></td>
+<td class="px-2 font-code-md text-code-md text-on-surface font-semibold">HHG-020</td>
+<td class="px-2 truncate text-on-surface font-medium" title="High-Value Electronics Same-Day Pickup">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">local_shipping</span>
+<span class="truncate">High-Value Electronics Same-Day Pickup</span>
+</div>
+</td>
+<td class="px-2 truncate">
+<div class="flex flex-col leading-tight">
+<span class="font-code-md text-code-md text-primary">CUST-9944</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">C. Taylor</span>
+</div>
+</td>
+<td class="px-2 font-code-md text-code-md text-on-surface-variant">AMEX •••• 4321</td>
+<td class="px-2">
+<div class="flex items-center justify-between font-code-md text-code-md">
+<span class="text-on-surface font-semibold">$3,400.00</span>
+<span class="font-label-sm text-[10px] text-outline truncate max-w-[90px]">Apex Hardware</span>
+</div>
+</td>
+<td class="px-2 text-center">
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold">78 HIGH</span>
+</td>
+<td class="px-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-error-container/20 text-error">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  ESCALATED
+                </span>
+</td>
+<td class="px-2 font-code-md text-[11px] text-on-surface-variant">6h 15m</td>
+<td class="px-2 text-right pr-3">
+<button class="px-2 py-0.5 bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-[10px] rounded transition-colors inline-flex items-center gap-1" type="button">
+<span>WORKSPACE</span>
+<span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & GSQL Status Bar Footer -->
+<div class="px-space-md py-2 bg-surface-container-low flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md font-label-sm text-label-sm">
+<div class="flex items-center gap-1 text-on-surface">
+<span class="text-outline">Showing</span>
+<span class="font-bold text-primary">20</span>
+<span class="text-outline">of 20 Cases</span>
+</div>
+<span class="text-outline-variant">|</span>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span>Selected:</span>
+<span class="font-bold text-primary" id="footerSelectedBadge">3</span>
+</div>
+<span class="text-outline-variant hidden sm:inline">|</span>
+<div class="hidden sm:flex items-center gap-1 font-code-md text-[10px] text-outline">
+<span class="text-tertiary">GSQL Query:</span>
+<span class="truncate max-w-md text-on-surface-variant">SELECT c.* FROM Case:c ACCUM ORDER BY c.risk_score DESC LIMIT 20 (4ms)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<button class="p-1 text-outline-variant cursor-not-allowed bg-surface-container rounded flex items-center" disabled="" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<span class="px-2 py-0.5 bg-surface-container-highest text-primary font-bold rounded">1 / 1</span>
+<button class="p-1 text-outline-variant cursor-not-allowed bg-surface-container rounded flex items-center" disabled="" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Inspector Split View Drawer (Live Micro-Inspector when enabled) -->
+<aside class="hidden w-96 flex-col bg-surface-container-lowest rounded shadow-lg overflow-hidden shrink-0" id="inspectorDrawer">
+<!-- Drawer Header -->
+<div class="flex items-center justify-between px-space-md py-space-sm bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">biotech</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface">LIVE CASE INSPECTOR</div>
+<div class="font-label-sm text-[9px] text-outline">ACTIVE ENTITY TOPOLOGY FOCUS</div>
+</div>
+</div>
+<button class="p-1 text-outline hover:text-on-surface rounded" id="btnCloseInspector" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Drawer Content -->
+<div class="p-space-md flex flex-col gap-space-md overflow-y-auto max-h-[calc(100vh-280px)]">
+<!-- Target Case Summary Card -->
+<div class="p-space-sm bg-surface-container-low rounded flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-code-md text-code-md font-bold text-error" id="inspCaseId">HHG-014</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-error-container text-on-error-container font-bold rounded" id="inspBadge">RISK: 92 / 100</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface" id="inspTrigger">Device Spoof &amp; Crypto Velocity</p>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-[10px] pt-1">
+<span>Customer: <strong class="text-primary font-code-md" id="inspCust">CUST-8831</strong></span>
+<span>Card: <strong class="text-on-surface font-code-md" id="inspCard">4912</strong></span>
+</div>
+</div>
+<!-- 2-Hop Graph Topology Preview (Vector Graphic) -->
+<div class="p-space-sm bg-surface-container-low rounded flex flex-col gap-2">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline uppercase">Sub-Graph Topology</span>
+<span class="text-tertiary">2-Hop Expansion</span>
+</div>
+<div class="relative w-full h-44 bg-surface-container-lowest rounded flex items-center justify-center overflow-hidden">
+<!-- Inline Mini Graph SVG -->
+<svg class="w-full h-full text-outline-variant" fill="none" viewbox="0 0 320 180">
+<!-- Edges -->
+<line stroke="currentColor" stroke-dasharray="2 2" stroke-width="1.5" x1="80" x2="160" y1="90" y2="45"></line>
+<line stroke="#ffb4ab" stroke-width="2" x1="160" x2="240" y1="45" y2="90"></line>
+<line stroke="currentColor" stroke-width="1.5" x1="160" x2="160" y1="45" y2="140"></line>
+<line stroke="#ffb4ab" stroke-width="2" x1="240" x2="280" y1="90" y2="140"></line>
+<!-- Edge Pill Label -->
+<rect fill="#0f131c" height="14" rx="2" width="56" x="180" y="58"></rect>
+<text fill="#8ed5ff" font-family="JetBrains Mono" font-size="8" x="183" y="68">TRANSFERRED</text>
+<!-- Nodes -->
+<!-- Node 1: Cust -->
+<circle cx="80" cy="90" fill="#181c24" r="14" stroke="#8ed5ff" stroke-width="2"></circle>
+<text fill="#8ed5ff" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="80" y="93">CUST</text>
+<!-- Node 2: Device Hub (Warning) -->
+<circle cx="160" cy="45" fill="#181c24" r="16" stroke="#56e5a9" stroke-width="2"></circle>
+<text fill="#56e5a9" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="160" y="48">DEVICE</text>
+<!-- Node 3: Txn Mule (Critical Red) -->
+<circle cx="240" cy="90" fill="#93000a" r="16" stroke="#ffb4ab" stroke-width="2"></circle>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="240" y="93">TX-CRIT</text>
+<!-- Node 4: CoinBridge -->
+<circle cx="280" cy="140" fill="#181c24" r="13" stroke="#ffb4ab" stroke-width="1.5"></circle>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="7" text-anchor="middle" x="280" y="143">BRIDGE</text>
+<!-- Node 5: Phone/SIM -->
+<circle cx="160" cy="140" fill="#181c24" r="12" stroke="#87929a" stroke-width="1.5"></circle>
+<text fill="#bdc8d1" font-family="JetBrains Mono" font-size="7" text-anchor="middle" x="160" y="143">SIM</text>
+</svg>
+<span class="absolute bottom-1.5 right-2 font-label-sm text-[9px] text-outline">GSQL Louvain Community #88</span>
+</div>
+</div>
+<!-- Evidence Vector Stream -->
+<div class="flex flex-col gap-1.5 font-label-sm text-label-sm">
+<div class="flex items-center justify-between text-outline">
+<span>DETECTION VECTOR</span>
+<span>CONFIDENCE</span>
+</div>
+<div class="p-2 bg-surface-container-low rounded flex items-center justify-between">
+<span class="text-on-surface">Fingerprint Canvas Collision</span>
+<span class="text-error font-code-md">99.4%</span>
+</div>
+<div class="p-2 bg-surface-container-low rounded flex items-center justify-between">
+<span class="text-on-surface">Proxy / Geo Velocity Inversion</span>
+<span class="text-error font-code-md">94.1%</span>
+</div>
+<div class="p-2 bg-surface-container-low rounded flex items-center justify-between">
+<span class="text-on-surface">Token Extraction Pattern</span>
+<span class="text-primary font-code-md">88.7%</span>
+</div>
+</div>
+<!-- Quick Launch CTA -->
+<button class="w-full py-2 bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm rounded font-bold transition-colors flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+<span>LAUNCH DEEP WORKSPACE (HHG-014)</span>
+</button>
+</div>
+</aside>
+</div>
+</div>
+<script>
+  (function() {
+    // DOM Elements
+    const searchInput = document.getElementById('mainCaseSearch');
+    const filterStatus = document.getElementById('filterStatus');
+    const filterRisk = document.getElementById('filterRisk');
+    const filterTrigger = document.getElementById('filterTrigger');
+    const btnReset = document.getElementById('btnResetFilters');
+    const selectAll = document.getElementById('selectAllCheckbox');
+    const caseCheckboxes = document.querySelectorAll('.case-select');
+    const bulkBar = document.getElementById('bulkActionBar');
+    const bulkCountText = document.getElementById('bulkSelectionCount');
+    const footerCountText = document.getElementById('footerSelectedBadge');
+    const clearSelectBtn = document.getElementById('btnClearSelection');
+    const rowsCountText = document.getElementById('renderedRowsCount');
+    const tableRows = document.querySelectorAll('#caseGridBody tr');
+    const toggleDense = document.getElementById('btnDenseView');
+    const toggleSplit = document.getElementById('btnSplitView');
+    const inspectorDrawer = document.getElementById('inspectorDrawer');
+    const btnCloseInspector = document.getElementById('btnCloseInspector');
+
+    // Inspector dynamic refs
+    const inspCaseId = document.getElementById('inspCaseId');
+    const inspBadge = document.getElementById('inspBadge');
+    const inspTrigger = document.getElementById('inspTrigger');
+    const inspCust = document.getElementById('inspCust');
+    const inspCard = document.getElementById('inspCard');
+
+    // Filter Logic
+    function applyFilters() {
+      const q = (searchInput.value || '').trim().toLowerCase();
+      const status = filterStatus.value;
+      const risk = filterRisk.value;
+      const trigger = filterTrigger.value;
+      let visible = 0;
+
+      tableRows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        const rowRisk = parseInt(row.getAttribute('data-risk') || '0', 10);
+        const rowStatus = row.getAttribute('data-status') || '';
+        const rowTrigger = row.getAttribute('data-trigger') || '';
+
+        // Search match
+        const matchesSearch = !q || text.includes(q);
+
+        // Status match
+        const matchesStatus = (status === 'ALL') || (rowStatus === status);
+
+        // Risk match
+        let matchesRisk = true;
+        if (risk === 'CRITICAL') matchesRisk = rowRisk >= 85;
+        else if (risk === 'HIGH') matchesRisk = rowRisk >= 70 && rowRisk <= 84;
+        else if (risk === 'MEDIUM') matchesRisk = rowRisk >= 40 && rowRisk <= 69;
+        else if (risk === 'LOW') matchesRisk = rowRisk < 40;
+
+        // Trigger match
+        const matchesTrigger = (trigger === 'ALL') || rowTrigger.toLowerCase().includes(trigger.toLowerCase());
+
+        if (matchesSearch && matchesStatus && matchesRisk && matchesTrigger) {
+          row.style.display = '';
+          visible++;
+        } else {
+          row.style.display = 'none';
+        }
+      });
+
+      if (rowsCountText) rowsCountText.textContent = visible;
+    }
+
+    searchInput?.addEventListener('input', applyFilters);
+    filterStatus?.addEventListener('change', applyFilters);
+    filterRisk?.addEventListener('change', applyFilters);
+    filterTrigger?.addEventListener('change', applyFilters);
+
+    btnReset?.addEventListener('click', () => {
+      if (searchInput) searchInput.value = '';
+      if (filterStatus) filterStatus.value = 'ALL';
+      if (filterRisk) filterRisk.value = 'ALL';
+      if (filterTrigger) filterTrigger.value = 'ALL';
+      applyFilters();
+    });
+
+    // Bulk Checkbox Logic
+    function updateSelectionCount() {
+      const checkedBoxes = document.querySelectorAll('.case-select:checked');
+      const count = checkedBoxes.length;
+
+      if (bulkCountText) bulkCountText.textContent = `${count} cases selected`;
+      if (footerCountText) footerCountText.textContent = count;
+
+      if (count === 0) {
+        if (bulkBar) bulkBar.style.opacity = '0.5';
+        if (selectAll) selectAll.checked = false;
+      } else {
+        if (bulkBar) bulkBar.style.opacity = '1';
+        if (selectAll) selectAll.checked = (count === caseCheckboxes.length);
+      }
+    }
+
+    selectAll?.addEventListener('change', (e) => {
+      const isChecked = e.target.checked;
+      caseCheckboxes.forEach(cb => {
+        const row = cb.closest('tr');
+        if (row && row.style.display !== 'none') {
+          cb.checked = isChecked;
+        }
+      });
+      updateSelectionCount();
+    });
+
+    caseCheckboxes.forEach(cb => {
+      cb.addEventListener('change', updateSelectionCount);
+    });
+
+    clearSelectBtn?.addEventListener('click', () => {
+      caseCheckboxes.forEach(cb => cb.checked = false);
+      if (selectAll) selectAll.checked = false;
+      updateSelectionCount();
+    });
+
+    // Row selection and inspector sync
+    tableRows.forEach(row => {
+      row.addEventListener('click', (e) => {
+        // Avoid handling when clicking directly on checkbox or workspace button
+        if (e.target.tagName === 'INPUT' || e.target.closest('button')) return;
+
+        // Populate Inspector
+        const caseId = row.getAttribute('data-case');
+        const risk = row.getAttribute('data-risk');
+        const trigger = row.getAttribute('data-trigger');
+        const custEl = row.querySelector('td:nth-child(4) .font-code-md');
+        const cardEl = row.querySelector('td:nth-child(5)');
+
+        if (inspCaseId) inspCaseId.textContent = caseId;
+        if (inspBadge) {
+          inspBadge.textContent = `RISK: ${risk} / 100`;
+          inspBadge.className = `font-label-sm text-label-sm px-1.5 py-0.5 font-bold rounded ${parseInt(risk, 10) >= 85 ? 'bg-error-container text-on-error-container' : 'bg-surface-container text-primary'}`;
+        }
+        if (inspTrigger) inspTrigger.textContent = trigger;
+        if (inspCust && custEl) inspCust.textContent = custEl.textContent;
+        if (inspCard && cardEl) inspCard.textContent = cardEl.textContent;
+
+        // Open Inspector if in split mode
+        if (inspectorDrawer && inspectorDrawer.classList.contains('hidden')) {
+          inspectorDrawer.classList.remove('hidden');
+          inspectorDrawer.classList.add('flex');
+          toggleSplit.classList.add('bg-surface-container', 'text-primary');
+          toggleDense.classList.remove('bg-surface-container', 'text-primary');
+        }
+      });
+    });
+
+    // View Mode Toggle
+    toggleDense?.addEventListener('click', () => {
+      inspectorDrawer.classList.add('hidden');
+      inspectorDrawer.classList.remove('flex');
+      toggleDense.classList.add('bg-surface-container', 'text-primary');
+      toggleSplit.classList.remove('bg-surface-container', 'text-primary');
+    });
+
+    toggleSplit?.addEventListener('click', () => {
+      inspectorDrawer.classList.remove('hidden');
+      inspectorDrawer.classList.add('flex');
+      toggleSplit.classList.add('bg-surface-container', 'text-primary');
+      toggleDense.classList.remove('bg-surface-container', 'text-primary');
+    });
+
+    btnCloseInspector?.addEventListener('click', () => {
+      inspectorDrawer.classList.add('hidden');
+      inspectorDrawer.classList.remove('flex');
+      toggleDense.classList.add('bg-surface-container', 'text-primary');
+      toggleSplit.classList.remove('bg-surface-container', 'text-primary');
+    });
+
+    // Initialize counts
+    updateSelectionCount();
+  })();
+</script></main></div><footer class="fixed bottom-0 left-0 right-0 h-8 z-40 bg-surface-container-lowest flex items-center justify-between px-space-lg select-none"><div class="flex items-center gap-space-md font-label-sm text-label-sm"><div class="flex items-center gap-1.5 text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>GSQL Autonomous Investigation Daemon:</span><span class="text-tertiary font-semibold">RUNNING</span></div><span class="text-outline-variant">|</span><span class="text-outline">ACTIVE THREADS: 12</span><span class="text-outline-variant">|</span><span class="text-outline">IOPS: 18.2K</span></div><div class="flex items-center gap-space-md font-label-sm text-label-sm"><span class="text-on-surface-variant">AUDIT SEC:</span><span class="text-primary">SOC2 Type II / PCI-DSS L1 Compliant</span><span class="text-outline-variant">|</span><span class="text-outline">SESSION ID: #SOC-88219-B</span></div></footer></body></html>
